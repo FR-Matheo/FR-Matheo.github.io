@@ -1,0 +1,769 @@
+/* ============================================
+   GLOBAL & RESPONSIVE
+============================================ */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1D1B20;
+    color: #e6e6e6;
+    margin: 0;
+}
+
+/* Utilisation de Bootstrap pour la responsivité dans les conteneurs */
+.container-fluid, .container {
+    padding: 0 30px; /* Espace horizontal accru sur vos conteneurs */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   SIDEBAR (fixée sur grand écran)
+============================================ */
+.sidebar {
+    background-color: #232125;
+    padding: 20px;
+    border-right: 1px solid #333;
+}
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 240px;
+        height: 100vh;
+        overflow-y: auto;
+    }
+    .main {
+        margin-left: 240px;
+        padding: 20px;
+    }
+    footer {
+        margin-left: 240px;
+    }
+    #OneNote {
+    width: 17%;
+    margin-left: 9%;
+    padding-bottom: 8%;
+    }
+}
+
+#OneNote2 {
+    width: 5%;
+    margin-left: 47%;
+    padding-bottom: 19%;
+}
+
+.navv-link {
+    color: #ffffff;
+    transition: color 0.3s;
+}
+.navv-link:hover {
+    color: #007BFF;
+}
+
+/* Pour mobile la sidebar se gère via Offcanvas (Bootstrap) */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+    .navbar-toggler {
+        display: block;
+    }
+    /* Effet d'élévation pour la navbar lorsqu'elle est scrollée */
+    .navbar-elevated {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        transition: box-shadow 0.3s ease;
+    }
+    /* Applique une transition douce pour les changements de position */
+    .navbar.fixed-top {
+        transition: transform 0.3s ease;
+    }
+    .navbar-hidden {
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+    #OneNote {
+    width: 12%;
+    margin-left: 8%;
+    padding-bottom: 6%;
+    }
+}
+
+
+
+.profile-img {
+    width: 150px;       /* Largeur fixe */
+    height: 150px;      /* Hauteur fixe pour un carré */
+    object-fit: cover;  /* Recadre l'image pour remplir le cadre */
+    border-radius: 30%; /* Pour rendre l'image circulaire */
+    object-position: 50% 30%; /* Centrage horizontal (50%) et déplacement vertical vers le haut (30%) */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   FOOTER (affiché uniquement en bas du contenu)
+============================================ */
+footer {
+    background-color: #1D1B20;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+    /* Pour un footer non fixe, il est dans le flux normal */
+}
+
+/* ============================================
+   EXEMPLES DE MEDIA QUERIES (pour affiner la responsivité)
+============================================ */
+@media (max-width: 767px) {
+    .main {
+        margin-left: 0;
+        padding: 15px;
+    }
+    h1 { 
+        font-size: 2rem; 
+    }
+    h2 { 
+        font-size: 1.5rem; 
+    }
+}
+
+/* ============================================
+   AUTRES SECTIONS & COMPOSANTS
+============================================ */
+/* Pour le formulaire de contact et les cartes d'articles, occupez toute la largeur disponible */
+form, .article-card {
+    width: 100%;
+    margin: auto;
+}
+
+/* ============================================
+   STYLES PERSONNALISÉS COMPLETS
+============================================ */
+
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1D1B20 !important;
+}
+
+/* Container personnalisé */
+.container {
+    display: flex !important;
+    flex-direction: column !important;
+
+}
+
+/* Sidebar – Pour mobile vous utilisez l’Offcanvas, ici pour grand écran */
+.sidebar {
+    width: 15%;
+    background-color: white;  /* Vous pouvez ajuster cette couleur si besoin */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    height: 100%;
+}
+#bar {
+    padding: 25px;
+}
+.barli {
+    background-color: rgb(224, 224, 224);
+    border: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    vertical-align: -webkit-baseline-middle;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1em;
+    list-style-type: none;
+}
+.abar {
+    color: #000;
+    text-decoration: none;
+}
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+}
+.social-links a {
+    color: #444;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #0077b5;
+}
+.aparc {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+/* Listes de parcours et centres d’intérêts */
+#ulParc {
+    padding: 0 0 0px 20px;
+    border-left: 3px solid #971f1f;
+    position: relative;
+}
+.liparc {
+    position: relative;
+    list-style: none;
+    margin-bottom: 10px;
+}
+.liparc::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    left: -33px;
+    background: #fff;
+    border: 3px solid #000;
+}
+
+/* Grid container pour parcours */
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+#parcours-l, #parcours-r {
+    padding: 20px;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+#stages {
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.stage {
+    background-color: #29272b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.stage h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.stage p {
+    color: #d1d1e9;
+    margin-bottom: 15px;
+}
+
+/* Bouton rapport */
+.btn-rapport {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+.btn-rapport:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* ============================================
+   COMPÉTENCES - CAROUSEL
+============================================ */
+/* Section Compétences */
+#competences {
+    background-color: #29272b;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+  }
+  
+  #competences h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Transition en fondu */
+  .carousel-item {
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+  /* Style des compétences */
+  .carousel-item .text-center {
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .carousel-item img {
+    max-height: 100px;
+    object-fit: contain;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .carousel-item p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ffffff;
+  }
+  @media (min-width: 768px) {
+    /* Utiliser carousel-fade pour l'animation */
+    .carousel.carousel-fade .carousel-item {
+        opacity: 0;
+        transition: opacity 2s ease-in-out;
+    }
+    .carousel.carousel-fade .carousel-item.active {
+        opacity: 1;
+        transition: opacity 0s ease-in-out;
+    }
+}
+/* ============================================
+   FORMULAIRE DE CONTACT
+============================================ */
+#contact {
+    text-align: center;
+}
+form {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+    background-color: #232125;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: #ffffff;
+    font-size: 1rem;
+}
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #f9f9f9;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #1D1B20;
+    color: #e6e6e6;
+}
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+form textarea {
+    resize: vertical;
+    height: 120px;
+}
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* ============================================
+   LIENS & IMAGES
+============================================ */
+a {
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+}
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.profile-pic {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.profile-pic img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+/* Ajoutez ces règles pour centrer le contenu et fixer une largeur globale */
+.main-content {
+    width: 100%;
+    background-image: url('images/ChatGPT_datacenter.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 100vh;  /* Prend toute la hauteur de l'écran */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0;  /* Vous pouvez ajuster le padding si nécessaire */
+}
+
+.content-container {
+    max-width: 1100px; /* ou la valeur souhaitée */
+    margin: 0 auto; 
+    text-align: center; /* centre le texte dans la div */
+    padding: 0 15px;
+}
+
+@media (min-width: 992px) {
+    .content-container {
+        padding-left: 19%;
+    }
+}
+
+.sidebarimg {
+    width: 17%;
+    height: auto;
+    object-fit: cover;
+}
+.main-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+.main-content h2 {
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.main-content p {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+.main {
+    color: #ffffff;
+    margin-left: 0;
+    padding: 20px;
+    flex-grow: 1;
+}
+@media (min-width: 992px) {
+    .main {
+        margin-left: 15%;
+    }
+}
+/* ============================= */
+/* REARRANGEMENT & HARMONIE DES SECTIONS
+/* ============================= */
+/* Style commun pour toutes les sections */
+section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 3rem 1rem;
+    background-color: rgba(35, 33, 37, 0.85);  /* fond légèrement contrasté */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+/* Titres de section */
+section h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #ffffff;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+/* Harmonisation du texte général dans les sections */
+section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e6e6e6;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+}
+#grid-container-bts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+#bts, #SISR, #SLAM {
+    text-align: center;
+}
+.projet {
+    background-color: #29272b;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.demo_wrap {
+    position: relative;
+    overflow: hidden;
+    padding: 16px;
+    border: 1px dashed green;
+}
+.demo_wrap img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+h2 {
+    margin-bottom: 20px;
+}
+.fa-user {
+    font-size: 70px;
+}
+
+/* ============================================
+   ARTICLES / VEILLE TECHNOLOGIQUE
+============================================ */
+#articles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.article-card {
+    background-color: #2c2b2f;
+    border: 1px solid #1D1B20;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px auto;
+}
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+.article-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+.article-card h3 {
+    font-size: 18px;
+    color: #fff;
+    margin: 10px 0;
+}
+.article-card p {
+    font-size: 14px;
+    color: #ccc;
+}
+.article-card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+.article-card button:hover {
+    background-color: #0056b3;
+}
+.article-card a {
+    text-decoration: none;
+}
+
+/* ============================================
+   FOOTER
+============================================ */
+.footer {
+    background-color: #1D1B20;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #ffffff;
+}
+.footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+.footer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+.footer-link:hover {
+    color: #007BFF;
+}
+
+/* Optimisation personnalisée pour téléphones (ex: moins de 576px) */
+@media (max-width: 576px) {
+    .main-content {
+      padding: 10% 5% !important;
+    }
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+}
+
+/* Styles pour la timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0.5%;
+    height: 100%;
+    border-left: 2px solid #007BFF; /* Couleur de la barre, modifiable */
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #007BFF; /* Même couleur que la barre */
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  
+  .timeline-content {
+    padding-left: 20px;
+  }
+
+.English {
+    width: 35%;
+}
+
+
+/* ========== FIX THEME SOMBRE / OVERRIDES (coller en fin de styles.css) ========== */
+
+/* Neutralise la règle qui rend la sidebar blanche */
+.sidebar {
+  background-color: #232125 !important; /* même couleur que le header / sections */
+  color: #e6e6e6 !important;
+}
+
+/* Liens et éléments sidebar */
+.sidebar a,
+.sidebar .nav-link,
+.sidebar .abar,
+.barli {
+  color: #e6e6e6 !important;
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+/* Forces largeur fixe cohérente pour grand écran (aligné avec le HTML) */
+@media (min-width: 768px) {
+  .sidebar {
+    width: 240px !important;
+  }
+  .main { margin-left: 240px !important; }
+  footer { margin-left: 240px !important; }
+}
+
+/* ========== CARTES "STAGES" — style sombre cohérent ========== */
+#stages .card,
+#stages .stage {
+  background-color: rgba(35,33,37,0.98) !important; /* très sombre, mais pas #000 */
+  color: #e6e6e6 !important;
+  border: 1px solid rgba(255,255,255,0.04) !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.55) !important;
+  border-radius: 8px !important;
+  padding: 18px;
+}
+
+/* Texte interne et sous-titres */
+#stages .card .card-subtitle,
+#stages .stage h4,
+#stages .stage h5 {
+  color: #9fa6ad !important;
+  font-weight: 600;
+}
+#stages .card .card-text,
+#stages .stage p,
+#stages .stage .list-unstyled {
+  color: #d3d7db !important;
+  opacity: 0.95;
+}
+
+/* Petites listes et puces */
+#stages .card .list-unstyled.small,
+#stages .stage .list-unstyled.small li {
+  color: #bfc7cb !important;
+  line-height: 1.35;
+}
+
+/* Boutons et liens dans les cartes */
+#stages .card a,
+#stages .stage a {
+  color: #8ab4ff !important;
+  text-decoration: underline !important;
+}
+#stages .card .btn,
+#stages .stage .btn-rapport {
+  background-color: #0b5ed7 !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  padding: .35rem .6rem !important;
+  font-size: .85rem !important;
+  border-radius: .35rem !important;
+}
+
+/* Responsive : empile sur small screens */
+@media (max-width: 991px) {
+  #stages .row.g-3 { gap: 1rem; }
+  #stages .card, #stages .stage { box-shadow: 0 4px 10px rgba(0,0,0,0.45) !important; }
+}
+
+/* Nettoyage : priorise les règles sombres si quelque chose d'autre tente d'écraser */
+#stages .card * { color: inherit !important; }

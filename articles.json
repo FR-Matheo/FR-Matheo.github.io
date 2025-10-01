@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Les attaques par ransomware augmentent de 9% en 2024 selon le FBI",
+        "image": "https://www.reuters.com/resizer/v2/DNRMIPCVLBMJVBKLWHK5YE7ZHU.jpg?auth=e8745bbc29997854a244a6d31fc5d40f31c7c63fd797db5d679434d4b91fbe0c&width=640&quality=80",
+        "summary": "Le FBI rapporte une augmentation de 9% des plaintes liées aux attaques par ransomware ciblant les infrastructures critiques en 2024, confirmant que ces attaques restent la menace cybernétique la plus répandue.",
+        "url": "https://www.reuters.com/world/us/complaints-about-ransomware-attacks-us-infrastructure-rise-9-fbi-says-2025-04-23/",
+        "date": "23 avril 2025"
+    },
+    {
+        "id": 2,
+        "title": "L'ANSSI publie son plan stratégique 2025-2027 pour renforcer la cybersécurité",
+        "image": "https://cyber.gouv.fr/themes/open_theme/logo.svg",
+        "summary": "L'Agence nationale de la sécurité des systèmes d'information dévoile son plan stratégique pour 2025-2027, visant à amplifier la réponse face à la massification des menaces cybernétiques et à développer des expertises clés.",
+        "url": "https://cyber.gouv.fr/actualites/lanssi-publie-son-plan-strategique-2025-2027",
+        "date": "15 mars 2025"
+    },
+    {
+        "id": 3,
+        "title": "Les techniques de phishing deviennent plus sophistiquées en 2025",
+        "image": "https://blog.barracuda.com/content/dam/barracuda-blog/images/2024/12/phishing-predictions/phishing-predictions.jpg",
+        "summary": "Les cybercriminels adoptent des techniques d'hameçonnage avancées, telles que l'utilisation de QR codes en ASCII et des URI de type blob, rendant les attaques plus difficiles à détecter.",
+        "url": "https://blog.barracuda.com/2024/12/04/threat-spotlight-phishing-techniques-2025",
+        "date": "4 décembre 2024"
+    },
+    {
+        "id": 4,
+        "title": "Augmentation record des attaques DDoS au premier trimestre 2025",
+        "image": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/4A5s2DqMFJK6khhxj0Ku6o/94be27b7026bf8396d823cba3b74fe41/image14.png",
+        "summary": "Cloudflare signale avoir atténué 20,5 millions d'attaques DDoS au premier trimestre 2025, soit une augmentation de 358% par rapport à l'année précédente, avec des attaques atteignant des volumes sans précédent.",
+        "url": "https://blog.cloudflare.com/ddos-threat-report-for-2025-q1/",
+        "date": "28 avril 2025"
+    },
+    {
+        "id": 5,
+        "title": "Démantèlement d'un important réseau criminel sur le Dark Web",
+        "image": "https://www.gendarmerie.interieur.gouv.fr/var/site/storage/images/_aliases/dsfr_md.2x/7/0/9/5/475907-1-fre-FR/98c14931f907-hacker-2300772_1280.jpg",
+        "summary": "L'Unité nationale cyber de la gendarmerie française a mené une opération aboutissant au démantèlement d'un réseau de trafic de drogues de synthèse opérant sur le Dark Web.",
+        "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/criminalite-organisee-et-enquetes/2025/l-unite-nationale-cyber-met-fin-aux-agissements-d-un-reseau-de-trafic-de-drogues-de-synthese-sur-le-darknet",
+        "date": "17 février 2025"
+    }
+]
