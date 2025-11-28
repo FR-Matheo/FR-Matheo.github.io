@@ -1,623 +1,675 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Matheo FRACASSI</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="shortcut icon" href="images/icon.png" type="images/png">
 </head>
+
 <body>
-  <div class="container-fluid p-0">
-    <!-- Navbar Mobile/Tablette (visible sur d-lg-none) -->
-    <nav class="navbar navbar-dark bg-dark d-lg-none fixed-top">
-      <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand ms-2" href="#accueil">Matheo FRACASSI</a>
+
+  <!-- Mobile Navigation Button -->
+  <button class="btn btn-primary d-lg-none position-fixed top-0 start-0 m-3 z-3" type="button"
+    data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Mobile Sidebar (Offcanvas) -->
+  <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="mobileSidebar"
+    aria-labelledby="mobileSidebarLabel">
+    <div class="offcanvas-header border-bottom border-secondary">
+      <h5 class="offcanvas-title font-heading" id="mobileSidebarLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul class="nav flex-column mb-auto">
+        <li class="nav-item"><a href="#accueil" class="nav-link text-white"><i class="fas fa-home me-2"></i> Accueil</a>
+        </li>
+        <li class="nav-item"><a href="#profil" class="nav-link text-white"><i class="fas fa-user me-2"></i> Profil</a>
+        </li>
+        <li class="nav-item"><a href="#parcours" class="nav-link text-white"><i class="fas fa-graduation-cap me-2"></i>
+            Parcours</a></li>
+        <li class="nav-item"><a href="#stages" class="nav-link text-white"><i class="fas fa-briefcase me-2"></i>
+            Experiences Pro</a></li>
+        <li class="nav-item"><a href="#competences" class="nav-link text-white"><i class="fas fa-code me-2"></i>
+            Compétences</a></li>
+        <li class="nav-item"><a href="#projets" class="nav-link text-white"><i class="fas fa-project-diagram me-2"></i>
+            Projets</a></li>
+        <li class="nav-item"><a href="#bts" class="nav-link text-white"><i class="fas fa-server me-2"></i> BTS SIO</a>
+        </li>
+        <li class="nav-item"><a href="#veille" class="nav-link text-white"><i class="fas fa-rss me-2"></i> Veille</a>
+        </li>
+        <li class="nav-item"><a href="#contact" class="nav-link text-white"><i class="fas fa-envelope me-2"></i>
+            Contact</a></li>
+      </ul>
+      <div class="mt-4 text-center">
+        <a href="https://www.linkedin.com/in/matheo-fracassi" target="_blank" class="text-white me-3"><i
+            class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/FR-Matheo" target="_blank" class="text-white"><i
+            class="fab fa-github fa-lg"></i></a>
       </div>
+    </div>
+  </div>
+
+  <!-- Desktop Sidebar -->
+  <aside class="sidebar d-none d-lg-flex flex-column p-3">
+    <div class="text-center mb-4">
+      <div class="profile-img-container mx-auto mb-3">
+        <!-- Placeholder for profile image if available, or initials -->
+        <img src="images/FRACASSI MATHEO.JPG" alt="Matheo FRACASSI" class="img-fluid rounded-circle">
+      </div>
+      <h4 class="text-white fw-bold mb-0">Matheo FRACASSI</h4>
+      <small class="text-muted">BTS SIO SISR</small>
+    </div>
+
+    <nav class="flex-grow-1">
+      <ul class="nav flex-column gap-1">
+        <li class="nav-item"><a href="#accueil" class="nav-link active"><i class="fas fa-home"></i>
+            <span>Accueil</span></a></li>
+        <li class="nav-item"><a href="#profil" class="nav-link"><i class="fas fa-user"></i> <span>Profil</span></a></li>
+        <li class="nav-item"><a href="#parcours" class="nav-link"><i class="fas fa-graduation-cap"></i>
+            <span>Parcours</span></a></li>
+        <li class="nav-item"><a href="#stages" class="nav-link"><i class="fas fa-briefcase"></i> <span>Experiences
+              Pro</span></a>
+        </li>
+        <li class="nav-item"><a href="#competences" class="nav-link"><i class="fas fa-code"></i>
+            <span>Compétences</span></a></li>
+        <li class="nav-item"><a href="#projets" class="nav-link"><i class="fas fa-project-diagram"></i>
+            <span>Projets</span></a></li>
+        <li class="nav-item"><a href="#bts" class="nav-link"><i class="fas fa-server"></i> <span>BTS SIO</span></a></li>
+        <li class="nav-item"><a href="#veille" class="nav-link"><i class="fas fa-rss"></i> <span>Veille</span></a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i>
+            <span>Contact</span></a></li>
+      </ul>
     </nav>
 
-    <div class="row g-0">
-      <!-- Sidebar pour grand écran (visible sur d-none d-lg-block) -->
-      <aside class="sidebar d-none d-lg-block bg-dark text-white" style="width: 240px; height: 100vh;">
-        <div class="p-3">
-          <div class="text-center mb-4">
-            <img src="images/FRACASSI MATHEO.jpg" alt="Photo de profil" class="profile-img">
-          </div>
-          <ul class="nav nav-pills flex-column mb-auto" id="menu">
-            <li class="nav-item">
-              <a href="#accueil" class="nav-link text-white">
-                <i class="fas fa-home"></i>
-                <span class="ms-1">Accueil</span>
-              </a>
-            </li>
-            <li>
-              <a href="#profil" class="nav-link text-white">
-                <i class="fas fa-address-book"></i>
-                <span class="ms-1">Profil</span>
-              </a>
-            </li>
-            <li>
-              <a href="#parcours" class="nav-link text-white">
-                <i class="fas fa-graduation-cap"></i>
-                <span class="ms-1">Parcours</span>
-              </a>
-            </li>
-            <li>
-              <a href="#stages" class="nav-link text-white">
-                <i class="fas fa-briefcase"></i>
-                <span class="ms-1">Stages</span>
-              </a>
-            </li>
-            <li>
-              <a href="#competences" class="nav-link text-white">
-                <i class="fas fa-lightbulb"></i>
-                <span class="ms-1">Compétences</span>
-              </a>
-            </li>
-            <li>
-              <a href="#projets" class="nav-link text-white">
-                <i class="fas fa-cogs"></i>
-                <span class="ms-1">Projets</span>
-              </a>
-            </li>
-            <li>
-              <a href="#bts" class="nav-link text-white">
-                <i class="fas fa-bug"></i>
-                <span class="ms-1">BTS SIO</span>
-              </a>
-            </li>
-            <li>
-              <a href="#veille" class="nav-link text-white">
-                <i class="fas fa-search"></i>
-                <span class="ms-1">Veille Techno</span>
-              </a>
-            </li>
-            <li>
-              <a href="#contact" class="nav-link text-white">
-                <i class="fas fa-paper-plane"></i>
-                <span class="ms-1">Contact</span>
-              </a>
-            </li>
-          </ul>
-          <hr class="border-secondary">
-          <div class="text-center">
-            <a href="https://www.linkedin.com/in/matheo-fracassi" target="_blank" class="navv-link me-3">
-              <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="https://github.com/FR-Matheo" target="_blank" class="navv-link">
-              <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a href="https://groupesb.sharepoint.com/sites/BTSSIO2026/_layouts/15/Doc.aspx?sourcedoc={d19f7864-7ec3-4fc2-a84a-990667434dc3}&action=view&wd=target%28Ateliers%20S1.one%7Cc4ccab2e-d385-48bc-b7e9-d5138329797e%2FOutils%7Cd8acbc54-2d51-4a05-b968-b83c68327a5c%2F%29&wdorigin=NavigationUrl" target="_blank" class="text-white">
-              <img src="images/logos/OneNote.svg" target="_blank" alt="Onenote" id="OneNote">
-            </a>
-          </div>
-        </div>
-      </aside>
-
-      <!-- Offcanvas pour mobile/tablette (visible sur d-lg-none) -->
-      <div class="offcanvas offcanvas-start bg-dark text-white d-lg-none" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="mobileSidebarLabel">Menu</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="nav nav-pills flex-column mb-auto" id="menu-mobile">
-            <li class="nav-item">
-              <a href="#accueil" class="nav-link text-white">
-                <i class="fas fa-home"></i>
-                <span class="ms-1">Accueil</span>
-              </a>
-            </li>
-            <li>
-              <a href="#profil" class="nav-link text-white">
-                <i class="fas fa-address-book"></i>
-                <span class="ms-1">Profil</span>
-              </a>
-            </li>
-            <li>
-              <a href="#grid-container" class="nav-link text-white">
-                <i class="fas fa-graduation-cap"></i>
-                <span class="ms-1">Parcours</span>
-              </a>
-            </li>
-            <li>
-              <a href="#stages" class="nav-link text-white">
-                <i class="fas fa-briefcase"></i>
-                <span class="ms-1">Stages</span>
-              </a>
-            </li>
-            <li>
-              <a href="#competences" class="nav-link text-white">
-                <i class="fas fa-lightbulb"></i>
-                <span class="ms-1">Compétences</span>
-              </a>
-            </li>
-            <li>
-              <a href="#projets" class="nav-link text-white">
-                <i class="fas fa-cogs"></i>
-                <span class="ms-1">Projets</span>
-              </a>
-            </li>
-            <li>
-              <a href="#bts" class="nav-link text-white">
-                <i class="fas fa-bug"></i>
-                <span class="ms-1">BTS SIO</span>
-              </a>
-            </li>
-            <li>
-              <a href="#veille" class="nav-link text-white">
-                <i class="fas fa-search"></i>
-                <span class="ms-1">Veille Techno</span>
-              </a>
-            </li>
-            <li>
-              <a href="#contact" class="nav-link text-white">
-                <i class="fas fa-paper-plane"></i>
-                <span class="ms-1">Contact</span>
-              </a>
-            </li>
-          </ul>
-          <hr class="border-secondary">
-          <div class="text-center">
-            <a href="https://www.linkedin.com/in/matheo-fracassi" target="_blank" class="text-white me-3">
-              <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="https://github.com/FR-Matheo" target="_blank" class="text-white">
-              <i class="fab fa-github fa-2x"></i>
-            </a>
-            <a href="https://groupesb.sharepoint.com/sites/BTSSIO2026/_layouts/15/Doc.aspx?sourcedoc={d19f7864-7ec3-4fc2-a84a-990667434dc3}&action=view&wd=target%28Ateliers%20S1.one%7Cc4ccab2e-d385-48bc-b7e9-d5138329797e%2FOutils%7Cd8acbc54-2d51-4a05-b968-b83c68327a5c%2F%29&wdorigin=NavigationUrl" target="_blank" class="text-white">
-              <img src="images/logos/OneNote.svg" target="_blank" alt="Onenote" id="OneNote">
-            </a><br><br>
-            <a href="indexen.html">
-              <img src="images/logos/flag-gb-svgrepo-com.svg" alt="English" id="English" class="text-white">
-            </a>
-          </div>
-        </div>
+    <div class="sidebar-footer text-center mt-auto pt-3 border-top border-secondary">
+      <div class="d-flex justify-content-center gap-3 mb-3">
+        <a href="https://www.linkedin.com/in/matheo-fracassi" target="_blank" class="social-link" title="LinkedIn"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/FR-Matheo" target="_blank" class="social-link" title="GitHub"><i
+            class="fab fa-github"></i></a>
       </div>
-
-      <!-- Contenu principal -->
-      <main id="accueil" class="main-content d-flex align-items-center justify-content-center text-center">
-        <div class="content-container">
-          <h1>Matheo FRACASSI</h1>
-          <h2>ÉTUDIANT EN BTS SIO</h2>
-          <p>Bienvenue sur mon Portfolio</p>
-        </div>
-      </main>
+      <p class="small text-muted mb-0">&copy; 2025</p>
     </div>
-  </div>
+  </aside>
 
-  <div class="main">
-    <!-- Section Profil -->
-    <section id="profil" class="container my-4">
-      <h2>À propos de moi</h2>
-      <p>
-        🎓 Je suis actuellement étudiant au lycée Saint Bénigne, situé à Dijon (21), où je poursuis ma première année de BTS SIO (Services Informatiques aux Organisations) dans l'option SISR (Solutions d’Infrastructure, Systèmes et Réseaux). Cette formation, reconnue pour son approche pratique et technique, me permet de développer des compétences solides dans le domaine de l'informatique, en particulier dans les spécialités liées aux systèmes et aux réseaux.
-      </p>
-      <p>
-        💡 Depuis mon plus jeune âge, l'informatique a toujours suscité mon intérêt et mon admiration. Ce domaine, en constante évolution, m’a toujours fasciné par sa capacité à résoudre des problèmes complexes et à connecter le monde.
-      </p>
-      <p>
-        🔧 C'est donc tout naturellement que j'ai choisi d’intégrer un cursus spécialisé en optant pour la voie SISR, qui me permet d’explorer des domaines tels que l’administration des réseaux, la gestion des systèmes informatiques, et la cybersécurité.
-      </p>
-      <p>
-        📘 En complément de mon parcours scolaire, je suis particulièrement motivé pour approfondir mes connaissances et à m'impliquer dans des projets concrets, en vue de devenir un expert dans le domaine des systèmes informatiques et réseaux.
-      </p>
-      <h3>Métier envisagé</h3>
-      <p>
-        J'envisage pour mon futur le métier d'administrateur système et réseau, un rôle mêlant compétences techniques avancées et résolution de problèmes complexes. Responsable de la gestion et de la maintenance des infrastructures informatiques, je m'intéresse particulièrement à la configuration de serveurs, à la gestion des réseaux et à la sécurité.
-      </p>
-    </section>
+  <!-- Main Content -->
+  <main class="main-content">
 
-    <!-- Section Parcours & Centre d'intérêts (timeline) -->
-    <section id="parcours" class="container my-4">
-      <div class="row">
-        <!-- Section Parcours -->
-        <div class="col-md-6 mb-4">
-          <h2>Parcours</h2>
-          <ul class="timeline list-unstyled">
-            <li class="timeline-item mb-4">
-              <div class="timeline-content">
-                <strong>BTS SIO</strong> – Option SISR<br>
-                En cours d'obtention<br>
-                2024 - 2026<br>
-                <a target="_blank" class="aparc" href="https://www.sb-lycee.fr/">Lycée Saint-Bénigne (21 – Dijon)</a>
-              </div>
-            </li>
-            <li class="timeline-item mb-4">
-              <div class="timeline-content">
-                <strong>Lycée Professionnel</strong> – Bac Professionnel SN, Option RISC<br>
-                Obtenu avec mention Bien<br>
-                2021 - 2024<br>
-                <a target="_blank" class="aparc" href="https://www.stjodijon.com/">Lycée Saint Joseph La Salle (21 – Dijon)</a>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-content">
-                <strong>Collège</strong> – Brevet<br>
-                Obtenu avec mention Bien<br>
-                2018 - 2021<br>
-                <a target="_blank" class="aparc" href="https://clg-acamus-genlis.eclat-bfc.fr/">Collège Albert Camus (21 – Genlis)</a>
-              </div>
-            </li>
-          </ul>
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-section d-flex align-items-center justify-content-center text-center">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container position-relative z-1">
+        <h1 class="display-2 fw-bold text-white mb-3 tracking-tight">Matheo <span class="text-primary">FRACASSI</span>
+        </h1>
+        <h2 class="h3 text-light fw-light mb-4">Étudiant en BTS SIO option SISR</h2>
+        <p class="lead text-gray-300 mb-5 mx-auto" style="max-width: 600px;">Passionné par l'administration système,
+          les
+          réseaux et la cybersécurité. En route vers l'excellence technique.</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#profil"
+            class="btn btn-primary btn-lg rounded-pill px-5 fw-semibold shadow-lg hover-lift">Découvrir</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-semibold hover-lift">Me
+            contacter</a>
         </div>
-        <!-- Section Centre d'intérêts -->
-        <div class="col-md-6 mb-4">
-          <h2>Centre d'intérêts</h2>
-          <ul class="timeline list-unstyled">
-            <li class="timeline-item mb-4">
-              <div class="timeline-content">
-                <strong>Escalade</strong>
-                <p>Je pratique ce sport mêlant cardio, endurance et force depuis 2022.</p>
-              </div>
-            </li>
-            <li class="timeline-item mb-4">
-              <div class="timeline-content">
-                <strong>Course à pied</strong>
-                <p>Je pratique depuis peu pour me mettre en forme et augmenter mon endurance.</p>
-              </div>
-            </li>
-            <li class="timeline-item mb-4">
-              <div class="timeline-content">
-                <strong>Muay Thaï</strong>
-                <p>Je pratique ce sport de combat (pieds, poings, tibias et coudes) au <a class="aparc" href="https://tigersgym.fr/">Tiger's Gym</a> de Longvic depuis l'été 2024.</p>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-content">
-                <strong>Guitare</strong>
-                <p>Je joue de la guitare électrique et acoustique dans un style rock/métal depuis l'été 2023.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div class="scroll-down">
+        <a href="#profil" class="text-white-50"><i class="fas fa-chevron-down fa-bounce"></i></a>
       </div>
     </section>
 
-    <!-- Section Stages -->
-    <section id="stages" class="container my-4">
-      <h2>Mes Stages</h2>
-      <div class="stage mb-4">
-        <h3>📌 Stage de 1ère Année de BTS - <span><a href="https://www.optionstelecom.fr/" target="_blank"><i><u>Options Télécom</u></i></a></span></h3>
-        <br>
-        <div class="row g-3">
-          <!-- Encarts Stage 1 : Support technique & Helpdesk -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Support technique (niveau 1)</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Autotask • IT Glue • Zabbix</h6>
-                <p class="card-text">
-                  Période : <strong>19 mai - 27 juin 2025</strong><br>
-                  Prise en charge complète du helpdesk : accueil téléphonique, diagnostic, création et suivi des tickets (Autotask). Utilisation d'IT Glue pour retrouver configurations et identifiants. Supervision via Zabbix pour détecter les incidents proactifs.
+    <div class="container-fluid px-lg-5 py-5">
+
+      <!-- Profil Section -->
+      <section id="profil" class="section-padding">
+        <div class="container-xl">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="position-relative">
+                <div class="absolute-blob blob-1"></div>
+                <div class="card bg-dark-glass border-0 p-4 position-relative z-1">
+                  <h2 class="display-6 fw-bold mb-4 text-white">À propos de <span class="text-primary">moi</span></h2>
+                  <p class="text-gray-300 mb-3">
+                    🎓 Actuellement étudiant en première année de <strong>BTS SIO</strong> (Services Informatiques aux
+                    Organisations) option <strong>SISR</strong> (Solutions d’Infrastructure, Systèmes et Réseaux) au
+                    lycée Saint Bénigne à Dijon.
+                  </p>
+                  <p class="text-gray-300 mb-3">
+                    💡 Passionné par l'informatique depuis mon plus jeune âge, je suis fasciné par la capacité de la
+                    technologie à résoudre des problèmes complexes et à connecter le monde.
+                  </p>
+                  <p class="text-gray-300">
+                    🔧 Mon objectif est de devenir <strong>Administrateur Système et Réseau</strong>, un métier
+                    alliant
+                    technique et stratégie.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card bg-dark-surface border-0 shadow-lg h-100">
+                <div class="card-body p-4 p-lg-5">
+                  <h3 class="h4 text-white mb-4"><i class="fas fa-bullseye text-primary me-2"></i> Objectifs
+                    Professionnels</h3>
+                  <ul class="list-unstyled d-flex flex-column gap-3 text-gray-300">
+                    <li class="d-flex align-items-start">
+                      <i class="fas fa-check-circle text-success mt-1 me-3"></i>
+                      <span>Maîtriser l'administration des serveurs (Windows/Linux)</span>
+                    </li>
+                    <li class="d-flex align-items-start">
+                      <i class="fas fa-check-circle text-success mt-1 me-3"></i>
+                      <span>Concevoir et sécuriser des architectures réseaux complexes</span>
+                    </li>
+                    <li class="d-flex align-items-start">
+                      <i class="fas fa-check-circle text-success mt-1 me-3"></i>
+                      <span>Développer des compétences en cybersécurité défensive</span>
+                    </li>
+                    <li class="d-flex align-items-start">
+                      <i class="fas fa-check-circle text-success mt-1 me-3"></i>
+                      <span>Automatiser les tâches d'infrastructure (Scripting, DevOps)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parcours Section -->
+      <section id="parcours" class="section-padding">
+        <div class="container-xl">
+          <h2 class="section-title text-center mb-5">Mon <span class="text-primary">Parcours</span></h2>
+
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <h3 class="h4 text-white mb-4 border-start border-4 border-primary ps-3">Formation</h3>
+              <div class="timeline-wrapper">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="badge bg-primary mb-2">2024 - 2026</span>
+                    <h5 class="text-white">BTS SIO – Option SISR</h5>
+                    <p class="text-muted mb-1">Lycée Saint-Bénigne (Dijon)</p>
+                    <p class="small text-gray-400">En cours d'obtention. Formation axée sur l'infrastructure et les
+                      réseaux.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="badge bg-secondary mb-2">2021 - 2024</span>
+                    <h5 class="text-white">Bac Pro SN – Option RISC</h5>
+                    <p class="text-muted mb-1">Lycée Saint Joseph La Salle (Dijon)</p>
+                    <p class="small text-gray-400">Mention Bien. Réseaux Informatiques et Systèmes Communicants.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="badge bg-dark border border-secondary mb-2">2018 - 2021</span>
+                    <h5 class="text-white">Brevet des Collèges</h5>
+                    <p class="text-muted mb-1">Collège Albert Camus (Genlis)</p>
+                    <p class="small text-gray-400">Mention Bien.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <h3 class="h4 text-white mb-4 border-start border-4 border-info ps-3">Centres d'intérêt</h3>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="interest-card">
+                    <i class="fas fa-mountain fa-2x text-primary mb-3"></i>
+                    <h5>Escalade</h5>
+                    <p class="small text-muted mb-0">Pratique régulière depuis 2022. Dépassement de soi.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="interest-card">
+                    <i class="fas fa-running fa-2x text-info mb-3"></i>
+                    <h5>Course à pied</h5>
+                    <p class="small text-muted mb-0">Endurance et persévérance.</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="interest-card">
+                    <i class="fas fa-guitar fa-2x text-warning mb-3"></i>
+                    <h5>Guitare</h5>
+                    <p class="small text-muted mb-0">Rock & Métal. Créativité.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stages Section -->
+      <section id="stages" class="section-padding bg-darker-alt mx-n-container">
+        <div class="container-xl">
+          <h2 class="section-title text-center mb-5">Expériences <span class="text-primary">Professionnelles</span>
+          </h2>
+
+          <div class="stage-featured mb-5">
+            <div class="card bg-dark-surface border-0 shadow-lg overflow-hidden">
+              <div class="row g-0">
+                <div class="col-md-4 bg-primary-gradient d-flex align-items-center justify-content-center p-4">
+                  <div class="text-center text-white">
+                    <i class="fas fa-shield-alt fa-4x mb-3"></i>
+                    <h3 class="h4 fw-bold">511e RT</h3>
+                    <p class="mb-0">Réserve Opérationnelle</p>
+                    <span class="badge bg-white text-primary mt-2">Actuellement</span>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body p-4 p-lg-5">
+                    <h4 class="card-title text-white mb-3">Réserviste - 511e RT</h4>
+                    <p class="card-text text-gray-300 mb-4">
+                      Membre de l'Escadron de Circulation et d'Escorte de Réserve (ECE-R) au sein du 511e Régiment du
+                      Train.
+                      J'assure des missions de régulation du trafic et d'escorte de convois logistiques.
+                    </p>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                          <div class="icon-square bg-dark-subtle text-primary me-3"><i class="fas fa-road"></i></div>
+                          <div>
+                            <h6 class="text-white mb-0">Circulation</h6>
+                            <small class="text-muted">Appui mouvement & Guidage</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                          <div class="icon-square bg-dark-subtle text-primary me-3"><i class="fas fa-shield-halved"></i>
+                          </div>
+                          <div>
+                            <h6 class="text-white mb-0">Escorte</h6>
+                            <small class="text-muted">Sécurisation de convois</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                          <div class="icon-square bg-dark-subtle text-primary me-3"><i
+                              class="fas fa-person-military-rifle"></i></div>
+                          <div>
+                            <h6 class="text-white mb-0">Engagement</h6>
+                            <small class="text-muted">Discipline & Cohésion</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-featured mb-5">
+            <div class="card bg-dark-surface border-0 shadow-lg overflow-hidden">
+              <div class="row g-0">
+                <div class="col-md-4 bg-primary-gradient d-flex align-items-center justify-content-center p-4">
+                  <div class="text-center text-white">
+                    <i class="fas fa-building fa-4x mb-3"></i>
+                    <h3 class="h4 fw-bold">Options Télécom</h3>
+                    <p class="mb-0">Stage de 1ère année BTS</p>
+                    <span class="badge bg-white text-primary mt-2">2025</span>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body p-4 p-lg-5">
+                    <h4 class="card-title text-white mb-3">Technicien Support & Réseau</h4>
+                    <p class="card-text text-gray-300 mb-4">
+                      Immersion complète dans une entreprise de télécommunications. J'ai pu participer activement au
+                      support client et à la gestion des infrastructures.
+                    </p>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                          <div class="icon-square bg-dark-subtle text-primary me-3"><i class="fas fa-headset"></i>
+                          </div>
+                          <div>
+                            <h6 class="text-white mb-0">Support Technique</h6>
+                            <small class="text-muted">Helpdesk, Autotask, IT Glue</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                          <div class="icon-square bg-dark-subtle text-primary me-3"><i class="fas fa-network-wired"></i>
+                          </div>
+                          <div>
+                            <h6 class="text-white mb-0">Infrastructures</h6>
+                            <small class="text-muted">Supervision Zabbix, FTTH</small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                          <div class="icon-square bg-dark-subtle text-primary me-3"><i class="fas fa-phone-alt"></i>
+                          </div>
+                          <div>
+                            <h6 class="text-white mb-0">Téléphonie IP</h6>
+                            <small class="text-muted">3CX, Yeastar, Migration</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card bg-dark-surface border-0 h-100 p-4 hover-scale">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h5 class="text-white mb-0">E-Cloud</h5>
+                  <span class="badge bg-secondary">Terminale</span>
+                </div>
+                <p class="text-gray-400 small mb-0">Mise en place de solutions réseaux et maintenance de parc
+                  informatique.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card bg-dark-surface border-0 h-100 p-4 hover-scale">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h5 class="text-white mb-0">QPC Informatique</h5>
+                  <span class="badge bg-secondary">Première</span>
+                </div>
+                <p class="text-gray-400 small mb-0">Administration système et sensibilisation à la sécurité des
+                  données.
                 </p>
-                <ul class="list-unstyled small">
-                  <li>→ ~40 tickets/semaine en période charge élevée</li>
-                  <li>→ Diagnostic SBC (Raspberry Pi) : vérification connexion, logs SSH, redémarrage ciblé</li>
-                  <li>→ Configuration messageries et horaires (3CX / Yeastar) pour jours fériés</li>
-                </ul>
               </div>
             </div>
-          </div>
-
-          <!-- Encarts Stage 2 : FTTH / Maintenance réseau -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Gestion incidents FTTH / FTTO</h5>
-                <h6 class="card-subtitle mb-2 text-muted">ONT • GTR • Opérateur</h6>
-                <p class="card-text">
-                  Intervention sur coupures fibre (ex. incident critique <strong>26 juin 2025</strong>). Mise en place de procédures de diagnostic ONT, contrôle voyants (PON / LOS / LAN) et basculement sur solutions 4G temporaires pour clients critiques.
+            <div class="col-md-4">
+              <div class="card bg-dark-surface border-0 h-100 p-4 hover-scale">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <h5 class="text-white mb-0">QPC Informatique</h5>
+                  <span class="badge bg-secondary">Seconde</span>
+                </div>
+                <p class="text-gray-400 small mb-0">Découverte du support technique et création de scripts
+                  automatisés.
                 </p>
-                <ul class="list-unstyled small">
-                  <li>→ Coordination opérateur pour GTR (ex. coupure FTTO le <strong>13 juin 2025</strong> : basculement secours)</li>
-                  <li>→ Maintenance préventive : nettoyage/connecteurs, remplacement préventif, tests de performance</li>
-                  <li>→ Tenue de fiches techniques mises à jour après chaque intervention</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Encarts Stage 3 : Téléphonie IP et déploiement -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Configuration & migration Téléphonie IP</h5>
-                <h6 class="card-subtitle mb-2 text-muted">3CX • Yeastar • Casques Yealink</h6>
-                <p class="card-text">
-                  Déploiements : configuration d'extensions, groupes de sonnerie, SVI et messageries. Participation à une migration analogique→IP (25 juin 2025) et résolution d'incidents complexes (ex. SVI et trunks SIP le <strong>27 mai 2025</strong>).
-                </p>
-                <ul class="list-unstyled small">
-                  <li>→ Correction de routage SIP (formatage des numéros : +33 vs 0X)</li>
-                  <li>→ Mise à jour firmware casque Yealink (ex. 104.435.0.10 → 104.435.0.35) sans prise en main distante</li>
-                  <li>→ Rédaction de guides utilisateurs et formation du personnel sur site</li>
-                </ul>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <hr>
-      <div class="stage mb-4">
-        <h3>📌 Stage de Terminale - <span><a href="https://www.e-cloud.fr/" target="_blank"><i><u>E-Cloud</u></i></a></span></h3>
-        <p>Mise en place de solutions réseaux, maintenance informatique, etc.</p>
-      </div>
-      <hr>
-      <div class="stage mb-4">
-        <h3>📌 Stage de Première - <span><a href="https://www.qpc-informatique.fr/" target="_blank"><i><u>QPC informatique</u></i></a></span></h3>
-        <p>Administration système, sécurité des données, etc.</p>
-      </div>
-      <hr>
-      <div class="stage">
-        <h3>📌 Stage de Seconde - <span><a href="https://www.qpc-informatique.fr/" target="_blank"><i><u>QPC Informatique</u></i></a></span></h3>
-        <p>Support technique, développement de scripts automatisés, etc.</p>
-      </div>
-    </section>
-    <!-- Section Compétences -->
-    <section id="competences" class="container my-4">
-      <h2 class="text-center mb-4">Compétences</h2>
-      <div id="competencesCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <!-- Slide 1 (seul contenu de base, le JS clonera le reste) -->
-          <div class="carousel-item active">
-            <div class="d-flex justify-content-center">
-              <div class="text-center me-3">
-                <p>HTML</p>
-                <img src="images/logos/html.png" alt="HTML" class="d-block mx-auto" style="height: 100px;">
+      </section>
+
+      <!-- Competences Section -->
+      <section id="competences" class="section-padding">
+        <div class="container-xl">
+          <h2 class="section-title text-center mb-5">Mes <span class="text-primary">Compétences</span></h2>
+
+          <div class="row g-4 justify-content-center">
+            <!-- Virtualisation -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="skill-item text-center">
+                <div class="skill-icon-wrapper mb-3">
+                  <i class="fas fa-microchip fa-3x text-primary"></i>
+                </div>
+                <h5 class="text-white h6">Virtualisation</h5>
               </div>
-              <div class="text-center me-3">
-                <p>CSS</p>
-                <img src="images/logos/css.png" alt="CSS" class="d-block mx-auto" style="height: 100px;">
+            </div>
+            <!-- Linux/Debian -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="skill-item text-center">
+                <div class="skill-icon-wrapper mb-3">
+                  <i class="fab fa-linux fa-3x text-white"></i>
+                </div>
+                <h5 class="text-white h6">Linux / Debian</h5>
               </div>
-              <div class="text-center">
-                <p>JavaScript</p>
-                <img src="images/logos/javascript.png" alt="JavaScript" class="d-block mx-auto" style="height: 100px;">
+            </div>
+            <!-- Docker -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="skill-item text-center">
+                <div class="skill-icon-wrapper mb-3">
+                  <i class="fab fa-docker fa-3x text-primary"></i>
+                </div>
+                <h5 class="text-white h6">Docker</h5>
+              </div>
+            </div>
+            <!-- Windows Server -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="skill-item text-center">
+                <div class="skill-icon-wrapper mb-3">
+                  <i class="fab fa-windows fa-3x text-primary"></i>
+                </div>
+                <h5 class="text-white h6">Win. Server</h5>
+                <small class="text-muted d-block mt-1">AD / Perms</small>
+              </div>
+            </div>
+            <!-- Réseaux -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="skill-item text-center">
+                <div class="skill-icon-wrapper mb-3">
+                  <i class="fas fa-network-wired fa-3x text-info"></i>
+                </div>
+                <h5 class="text-white h6">VLAN / Routage</h5>
+              </div>
+            </div>
+            <!-- Pix -->
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="skill-item text-center">
+                <div class="skill-icon-wrapper mb-3">
+                  <img src="images/logos/pix.png" alt="Pix" class="img-fluid" style="max-height: 60px;">
+                </div>
+                <h5 class="text-white h6">Pix</h5>
+                <a href="documents/attestation-pix-20231220.pdf" target="_blank"
+                  class="btn btn-xs btn-outline-primary mt-1 py-0 px-2" style="font-size: 0.7rem;">713 pts</a>
               </div>
             </div>
           </div>
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="d-flex justify-content-center">
-              <div class="text-center me-3">
-                <p>Python</p>
-                <img src="images/logos/python.png" alt="Python" class="d-block mx-auto" style="height: 100px;">
-              </div>
-              <div class="text-center me-3">
-                <p>Azure</p>
-                <img src="images/logos/azure.png" alt="Azure" class="d-block mx-auto" style="height: 100px;">
-              </div>
-              <div class="text-center">
-                <p>Pix</p>
-                <img src="images/logos/pix.png" alt="Pix" class="d-block mx-auto" style="height: 100px;">
-                <a href="documents/attestation-pix-20231220.pdf" target="_blank" class="btn btn-primary mt-2">Voir Certification</a>
+
+          <!-- Languages Section -->
+          <h3 class="h4 text-white mt-5 mb-4 text-center">Langues</h3>
+          <div class="row justify-content-center g-4">
+            <div class="col-md-4 col-lg-3">
+              <div class="card bg-dark-surface border-0 p-3 text-center">
+                <h5 class="text-white mb-2">Anglais</h5>
+                <span class="badge bg-primary">Niveau B2</span>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- Contrôles du carousel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#competencesCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Précédent</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#competencesCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Suivant</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projets" class="container my-4">
-      <h2>Mes Projets</h2>
-
-      <!-- Projet 1 : Bioshield (Mini-entreprise) -->
-      <div class="projet mb-4">
-        <h3>Bioshield - Mini-entreprise EPA France</h3>
-        <div class="row">
-          <div class="col-md-8">
-            <p>
-              <strong>Prix du Numérique National 2025</strong> - Diffuseur d'huiles essentielles 
-              écologique pour l'agriculture, développé en équipe de 8 personnes. Alternative 
-              naturelle aux pesticides chimiques pour protéger les cultures tout en préservant 
-              l'environnement et la santé des agriculteurs.
-            </p>
-            <ul class="list-unstyled">
-              <li><strong>Innovation :</strong> Solution 100% biodégradable sans résidus chimiques</li>
-              <li><strong>Impact :</strong> Protection des cultures et préservation de la biodiversité</li>
-              <li><strong>Reconnaissance :</strong> Sélection parmi 80+ mini-entreprises nationales</li>
-              <li><strong>Événement :</strong> Festival Nation EPA France - Stade Charléty, Paris</li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-body text-center">
-                <h6 class="card-title">Compétences développées</h6>
-                <ul class="list-unstyled small">
-                  <li>Gestion de projet</li>
-                  <li>Travail en équipe</li>
-                  <li>Pitch commercial</li>
-                  <li>Innovation produit</li>
-                </ul>
+            <div class="col-md-4 col-lg-3">
+              <div class="card bg-dark-surface border-0 p-3 text-center">
+                <h5 class="text-white mb-2">Français</h5>
+                <span class="badge bg-secondary">Langue Maternelle</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Projet 2 : Infrastructure téléphonie IP -->
-      <div class="projet mb-4">
-        <h3>Déploiement Infrastructure Téléphonie IP</h3>
-        <p>
-          Mise en place complète d'une infrastructure de téléphonie IP pour entreprise : 
-          installation serveur <strong>Yeastar</strong>, configuration d'extensions utilisateurs, 
-          paramétrage de groupes de sonnerie et messageries vocales. Gestion de la migration 
-          depuis un système analogique traditionnel vers une solution moderne et évolutive.
-        </p>
-        <div class="row mt-3">
-          <div class="col-md-6">
-            <strong>Technologies utilisées :</strong>
-            <ul>
-              <li>Serveurs IPBX Yeastar et 3CX</li>
-              <li>Téléphones IP et casques Yealink</li>
-              <li>Configuration SIP trunks</li>
-              <li>Raspberry Pi en SBC</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <strong>Réalisations :</strong>
-            <ul>
-              <li>Formation des utilisateurs finaux</li>
-              <li>Documentation technique complète</li>
-              <li>Tests de validation et mise en service</li>
-              <li>Optimisation des codecs audio</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <!-- Projets Section -->
+      <section id="projets" class="section-padding">
+        <div class="container-xl">
+          <h2 class="section-title text-center mb-5">Projets <span class="text-primary">Réalisés</span></h2>
 
-      <!-- Projet 3 : Supervision et monitoring réseau -->
-      <div class="projet mb-4">
-        <h3>Supervision et Monitoring Réseau</h3>
-        <p>
-          Déploiement et configuration d'une plateforme de supervision <strong>Zabbix</strong> 
-          pour le monitoring proactif d'infrastructures critiques. Mise en place de tableaux 
-          de bord personnalisés, seuils d'alerte intelligents et notifications automatisées 
-          pour anticiper les pannes avant qu'elles n'impactent les utilisateurs.
-        </p>
-        <div class="card mt-3">
-          <div class="card-body">
-            <strong>Impact opérationnel :</strong> Réduction de 70% du temps de détection des incidents 
-            grâce aux alertes proactives et amélioration significative de la disponibilité des services.
+          <!-- Featured Project -->
+          <div class="card bg-dark-surface border-0 shadow-lg overflow-hidden mb-5">
+            <div class="card-body p-0">
+              <div class="row g-0">
+                <div class="col-lg-7 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                  <div class="mb-3">
+                    <span class="badge bg-success mb-2">Prix National 2025</span>
+                    <h3 class="display-6 fw-bold text-white">Bioshield</h3>
+                    <h4 class="h5 text-primary">Mini-entreprise EPA France</h4>
+                  </div>
+                  <p class="text-gray-300 mb-4">
+                    Conception et développement d'un diffuseur d'huiles essentielles écologique pour l'agriculture.
+                    Une
+                    alternative naturelle et innovante aux pesticides chimiques, respectueuse de l'environnement.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2 mb-4">
+                    <span class="badge bg-dark-subtle border border-secondary text-light">Innovation</span>
+                    <span class="badge bg-dark-subtle border border-secondary text-light">Écologie</span>
+                    <span class="badge bg-dark-subtle border border-secondary text-light">Gestion de projet</span>
+                  </div>
+                </div>
+                <div class="col-lg-5 bg-success-subtle d-flex align-items-center justify-content-center p-5">
+                  <i class="fas fa-leaf fa-6x text-success"></i>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <!-- Projet 4 : Migration et déménagement infrastructure -->
-      <div class="projet mb-4">
-        <h3>Migration Complète d'Infrastructure</h3>
-        <p>
-          Participation active au déménagement complet des locaux d'<strong>Options Télécom</strong> : 
-          planification du câblage réseau, installation de l'infrastructure (bornes WiFi, 
-          caméras sécurité), configuration routeur Fortinet et validation de l'ensemble 
-          de la connectivité. Projet mené sans interruption de service client.
-        </p>
-        <div class="row mt-3">
-          <div class="col-md-6">
-            <strong>Phase infrastructure :</strong>
-            <ul>
-              <li>Tirage et sertissage de câbles RJ45</li>
-              <li>Installation équipements réseau</li>
-              <li>Configuration VLAN et sécurité</li>
-              <li>Tests systématiques de connectivité</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <strong>Résultats :</strong>
-            <ul>
-              <li>Reprise d'activité immédiate</li>
-              <li>Infrastructure moderne et évolutive</li>
-              <li>Zéro interruption de service client</li>
-              <li>Organisation spatiale optimisée</li>
-            </ul>
+          <!-- Other Projects Grid -->
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card-mini h-100 p-4 bg-dark-surface rounded-4 border border-white-10">
+                <div class="icon-box mb-3 text-primary"><i class="fas fa-phone-alt fa-2x"></i></div>
+                <h4 class="h5 text-white">Téléphonie IP</h4>
+                <p class="text-gray-400 small">Déploiement complet d'infrastructure Yeastar/3CX. Migration de lignes
+                  analogiques vers IP.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-card-mini h-100 p-4 bg-dark-surface rounded-4 border border-white-10">
+                <div class="icon-box mb-3 text-primary"><i class="fas fa-chart-line fa-2x"></i></div>
+                <h4 class="h5 text-white">Supervision Zabbix</h4>
+                <p class="text-gray-400 small">Mise en place de monitoring proactif, création de tableaux de bord et
+                  alertes.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="project-card-mini h-100 p-4 bg-dark-surface rounded-4 border border-white-10">
+                <div class="icon-box mb-3 text-primary"><i class="fas fa-server fa-2x"></i></div>
+                <h4 class="h5 text-white">Migration Infra</h4>
+                <p class="text-gray-400 small">Déménagement complet d'infrastructure : câblage, VLANs, configuration
+                  Fortinet.</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section BTS SIO avec options SISR & SLAM -->
-    <section id="bts" class="container my-4">
-      <h2>BTS SIO</h2>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <h3>SISR</h3>
-          <p>
-            La spécialité SISR forme aux infrastructures réseaux et systèmes, en mettant l'accent sur l'administration, la sécurisation et le maintien en condition opérationnelle des systèmes. Cette option prépare à gérer des serveurs, à configurer des réseaux et à assurer la continuité de service.
-          </p>
+      <!-- BTS SIO Section -->
+      <section id="bts" class="section-padding">
+        <div class="container-xl">
+          <h2 class="section-title text-center mb-5">Le BTS <span class="text-primary">SIO</span></h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card bg-dark-surface border-0 h-100 p-4 border-top border-4 border-primary">
+                <div class="card-body text-center">
+                  <i class="fas fa-server fa-3x text-primary mb-3"></i>
+                  <h3 class="h4 text-white">Option SISR</h3>
+                  <p class="text-primary small fw-bold">Solutions d’Infrastructure, Systèmes et Réseaux</p>
+                  <p class="text-gray-300">
+                    L’option SISR forme des spécialistes des infrastructures réseaux, de la sécurité, de la
+                    maintenance
+                    et de l’administration des systèmes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card bg-dark-surface border-0 h-100 p-4 border-top border-4 border-info">
+                <div class="card-body text-center">
+                  <i class="fas fa-code fa-3x text-info mb-3"></i>
+                  <h3 class="h4 text-white">Option SLAM</h3>
+                  <p class="text-info small fw-bold">Solutions Logicielles et Applications Métier</p>
+                  <p class="text-gray-300">
+                    L’option SLAM est orientée vers la conception et le développement d’applications. (Option non
+                    choisie mais compétences transverses acquises).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <h3>SLAM</h3>
-          <p>
-            La spécialité SLAM se concentre sur le développement logiciel. Elle enseigne la conception, le développement, le test et la maintenance d'applications et de services numériques. Les compétences en programmation, en gestion de bases de données et en conception d'interfaces y sont au cœur.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section Veille Technologique -->
-    <section id="veille" class="container my-4">
-      <h2>Veille Technologique</h2>
-      <div id="articles-container"></div>
-    </section>
+      <!-- Veille Section -->
+      <section id="veille" class="section-padding">
+        <div class="container-xl">
+          <h2 class="section-title text-center mb-5">Veille <span class="text-primary">Technologique</span></h2>
+          <div id="articles-container" class="row g-4">
+            <!-- Articles will be injected here by JS -->
+          </div>
+        </div>
+      </section>
 
-    <!-- Section Contact -->
-    <section id="contact" class="container my-4">
-      <h2>Contact</h2>
-      <form id="contactForm">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required>
-  
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-  
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-  
-        <input type="submit" value="Envoyer">
-      </form>
-      <div id="formResponse"></div>
-    </section>
-  </div>
+      <!-- Contact Section -->
+      <section id="contact" class="section-padding mb-5">
+        <div class="container-xl">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="card bg-dark-surface border-0 shadow-lg p-4 p-lg-5">
+                <h2 class="text-center text-white mb-4">Me <span class="text-primary">Contacter</span></h2>
+                <form id="contactForm">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control bg-darker border-secondary text-white" id="name"
+                          placeholder="Nom" required>
+                        <label for="name" class="text-muted">Nom</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control bg-darker border-secondary text-white" id="email"
+                          placeholder="Email" required>
+                        <label for="email" class="text-muted">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <textarea class="form-control bg-darker border-secondary text-white" id="message"
+                          placeholder="Message" style="height: 150px" required></textarea>
+                        <label for="message" class="text-muted">Message</label>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn btn-primary btn-lg px-5 rounded-pill">Envoyer</button>
+                    </div>
+                  </div>
+                </form>
+                <div id="formResponse" class="mt-3 text-center"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <footer class="footer bg-dark text-white pt-5 pb-3">
-    <div class="container">
-      <div class="row">
-        <!-- À Propos -->
-        <div class="col-md-4 mb-3">
-          <h5>À Propos</h5>
-          <p>
-            Matheo FRACASSI, étudiant en BTS SIO passionné d'informatique et de nouvelles technologies. Construisons ensemble le monde connecté de demain.
-          </p>
-        </div>
-        <!-- Navigation -->
-        <div class="col-md-4 mb-3">
-          <h5>Navigation</h5>
-          <ul class="list-unstyled">
-            <li><a href="#accueil" class="footer-link">Accueil</a></li>
-            <li><a href="#profil" class="footer-link">Profil</a></li>
-            <li><a href="#parcours" class="footer-link">Parcours</a></li>
-            <li><a href="#competences" class="footer-link">Compétences</a></li>
-            <li><a href="#projets" class="footer-link">Projets</a></li>
-            <li><a href="#contact" class="footer-link">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Réseaux Sociaux -->
-        <div class="col-md-4 mb-3">
-          <h5>Réseaux Sociaux</h5>
-          <a href="https://www.linkedin.com/in/matheo-fracassi" target="_blank" class="footer-link">
-            <i class="fab fa-linkedin fa-lg"></i>
-          </a>
-          <a href="https://github.com/FR-Matheo" target="_blank" class="footer-link">
-            <i class="fab fa-github fa-lg"></i>
-          </a>
-          <a href="https://groupesb.sharepoint.com/sites/BTSSIO2026/_layouts/15/Doc.aspx?sourcedoc={d19f7864-7ec3-4fc2-a84a-990667434dc3}&action=view&wd=target%28Ateliers%20S1.one%7Cc4ccab2e-d385-48bc-b7e9-d5138329797e%2FOutils%7Cd8acbc54-2d51-4a05-b968-b83c68327a5c%2F%29&wdorigin=NavigationUrl" target="_blank" class="text-white">
-            <img src="images/logos/OneNote.svg" target="_blank" alt="Onenote" id="OneNote2" class="footer-link">
-          </a>
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <p>&copy; <span id="currentYear"></span> Matheo FRACASSI. Tous droits réservés.</p>
-      </div>
+      <!-- Footer -->
+      <footer class="text-center text-muted py-4 border-top border-secondary mt-auto">
+        <p class="mb-0">&copy; <span id="currentYear"></span> Matheo FRACASSI. Tous droits réservés.</p>
+        <p class="small">Développé avec passion.</p>
+      </footer>
+
     </div>
-  </footer>
-  
-  <script src="scriptmalicieux.js"></script>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="tech_news.js"></script>
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>
