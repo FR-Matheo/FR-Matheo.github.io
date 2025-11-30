@@ -1,134 +1,68 @@
 [
-    {
-        "titre": "Azure Bastion : L'authentification Entra ID désormais disponible pour les connexions RDP",
-        "resume": "Microsoft a annoncé l'intégration de l'authentification Entra ID (anciennement Azure AD) pour les connexions RDP via Azure Bastion. Cette évolution renforce la sécurité des accès aux machines virtuelles dans le cloud Azure. Elle simplifie également la gestion des identités et des accès pour les administrateurs.",
-        "interet_pro": "Les SysAdmins et CISO bénéficieront d'une sécurité accrue et d'une gestion des identités centralisée pour les accès RDP aux VM Azure. Cela permet de réduire la surface d'attaque et d'appliquer plus facilement les politiques de sécurité (MFA, Conditional Access) déjà en place avec Entra ID.",
-        "interet_perso": "N/A",
-        "mise_en_oeuvre": "Vérifier la disponibilité et activer cette fonctionnalité pour les déploiements Azure Bastion existants ou futurs. Mettre à jour les documentations internes sur les procédures de connexion RDP sécurisées.",
-        "fiabilite": "Élevée - Annonce officielle de Microsoft relayée par un blog technique réputé.",
-        "score": 9,
-        "link": "https://www.it-connect.fr/azure-bastion-prend-desormais-en-charge-lauthentification-entra-id-pour-les-connexions-rdp/",
-        "date": "2025-11-28T15:45:00.000Z"
-    },
-    {
-        "titre": "GrapheneOS : Retrait de l'infrastructure française et d'OVHcloud suite à une polémique",
-        "resume": "GrapheneOS, un système d'exploitation mobile axé sur la sécurité et la vie privée, a annoncé la fermeture de son infrastructure en France et son retrait d'OVHcloud. Cette décision fait suite à une polémique médiatique concernant un article du Parisien. Ce mouvement soulève des questions sur la souveraineté numérique et la perception de la sécurité des données hébergées en France.",
-        "interet_pro": "Pour les CISO et responsables d'infrastructure, cet événement met en lumière les risques potentiels liés à la réputation et aux décisions politiques qui peuvent affecter la disponibilité et la confiance dans les services hébergés localement. Il incite à une veille sur les enjeux géopolitiques du cloud et de l'hébergement et peut influencer le choix des fournisseurs pour les infrastructures critiques.",
-        "interet_perso": "Si vous utilisez GrapheneOS ou êtes intéressé par la souveraineté numérique et la vie privée, cette nouvelle est importante. Elle illustre les défis rencontrés par les projets open source et axés sur la confidentialité face à la pression médiatique et politique, et peut influencer vos choix d'OS mobile ou de services cloud.",
-        "mise_en_oeuvre": "Surveiller les développements liés à cette affaire et ses implications pour la localisation des données et des services. Évaluer l'impact des décisions géopolitiques sur les stratégies d'hébergement.",
-        "fiabilite": "Élevée - Annonce du projet GrapheneOS relayée par un blog technique réputé.",
-        "score": 8,
-        "link": "https://www.it-connect.fr/grapheneos-quitte-la-france-et-ovhcloud-pourquoi/",
-        "date": "2025-11-28T09:08:51.000Z"
-    },
-    {
-        "titre": "Fuite de données majeure chez Mixpanel impactant les utilisateurs d'OpenAI (ChatGPT)",
-        "resume": "Une compromission de données a été confirmée chez Mixpanel, un prestataire d'OpenAI, exposant des informations d'utilisateurs de ChatGPT. Les cybercriminels ont eu accès à ces données via l'infrastructure tierce de Mixpanel. Il est impératif d'identifier la nature exacte des données compromises pour en évaluer l'impact et les risques associés.",
-        "interet_pro": "Les entreprises utilisant ChatGPT pour leurs opérations internes ou externes doivent surveiller cet incident. Une réévaluation des risques liés aux prestataires tiers est nécessaire, ainsi qu'une vérification de la conformité au RGPD/autres réglementations concernant la protection des données utilisateur.",
-        "interet_perso": "Les utilisateurs individuels de ChatGPT sont potentiellement affectés. Il est conseillé de rester vigilant face aux tentatives de phishing et de surveiller les communications officielles d'OpenAI pour toute mesure corrective ou information supplémentaire.",
-        "mise_en_oeuvre": "Informatif. Suivre les annonces d'OpenAI et de Mixpanel pour comprendre l'étendue de la fuite. Sensibiliser les utilisateurs aux risques de phishing.",
-        "fiabilite": "Élevée - Incident de sécurité majeur rapporté par une source technique fiable (IT-Connect).",
-        "score": 9,
-        "link": "https://www.it-connect.fr/openai-chatgpt-une-fuite-de-donnees-chez-le-prestataire-mixpanel/",
-        "date": "2025-11-27T19:00:00.000Z"
-    },
-    {
-        "titre": "Proton Pass CLI : Gérer vos mots de passe depuis le terminal en toute sécurité",
-        "resume": "Proton, réputé pour ses services sécurisés, lance une interface en ligne de commande (CLI) pour son gestionnaire de mots de passe, Proton Pass. Cet outil permet un accès et une gestion simplifiés des secrets stockés dans le coffre-fort directement depuis un terminal. Il est particulièrement utile pour l'intégration dans des scripts ou des environnements de serveurs.",
-        "interet_pro": "Facilite l'automatisation de l'accès aux secrets pour les SysAdmins et développeurs, améliorant la sécurité et l'efficacité des workflows. Permet une gestion programmatique et sécurisée des identifiants sur les systèmes sans interface graphique.",
-        "interet_perso": "Offre une méthode rapide et sécurisée pour gérer les mots de passe pour les utilisateurs techniques ou les développeurs sur leurs machines personnelles et dans les environnements de Home Lab.",
-        "mise_en_oeuvre": "Tester l'outil Proton Pass CLI pour évaluer son intégration dans les scripts existants ou pour une gestion sécurisée des identifiants sur serveurs.",
-        "fiabilite": "Élevée - Annonce de Proton, relayée par IT-Connect, une source technique fiable.",
-        "score": 8,
-        "link": "https://www.it-connect.fr/proton-pass-cli-un-outil-pour-acceder-a-vos-mots-de-passe-depuis-le-terminal/",
-        "date": "2025-11-28T04:00:00.000Z"
-    },
-    {
-        "titre": "GreyNoise : Évaluez gratuitement la réputation de votre adresse IP publique",
-        "resume": "GreyNoise, un acteur clé de la Threat Intelligence, propose un nouvel outil en ligne gratuit pour vérifier si une adresse IP publique est associée à des activités malveillantes. Ce service identifie rapidement les balayages de ports, les tentatives d'exploitation ou d'autres comportements suspects. C'est un excellent moyen d'évaluer la 'propreté' et la réputation de votre IP.",
-        "interet_pro": "Les équipes de sécurité et SOC peuvent utiliser cet outil pour évaluer rapidement la réputation des adresses IP externes de l'entreprise ou lors d'investigations. Il complète la veille sur les menaces et l'analyse d'incidents.",
-        "interet_perso": "Tout particulier peut vérifier si son adresse IP résidentielle est compromise ou si elle a été impliquée dans des activités suspectes, contribuant ainsi à une détection précoce de compromissions potentielles.",
-        "mise_en_oeuvre": "Tester l'outil GreyNoise pour analyser les adresses IP publiques de l'entreprise et intégrer ce contrôle dans les routines de sécurité si pertinent. Sensibiliser les utilisateurs à cette ressource.",
-        "fiabilite": "Élevée - Outil proposé par GreyNoise, acteur reconnu dans la Threat Intelligence, rapporté par IT-Connect.",
-        "score": 8,
-        "link": "https://www.it-connect.fr/outil-gratuit-analyse-adresse-ip-reseau-compromis/",
-        "date": "2025-11-27T09:26:39.000Z"
-    },
-    {
-        "titre": "Virtualisation de DSM : Créer une machine virtuelle Synology sur un NAS existant",
-        "resume": "Ce tutoriel explique comment créer une machine virtuelle Virtual DSM sur un NAS Synology, permettant d'exécuter plusieurs instances du système d'exploitation DSM sur un seul appareil physique. Cette capacité offre une flexibilité accrue pour le test de configurations, la séparation des environnements ou la gestion de services distincts avec isolation.",
-        "interet_pro": "Permet aux SysAdmins de virtualiser des environnements DSM pour des tests, du développement, ou pour isoler des services critiques sur des machines virtuelles dédiées. Optimise l'utilisation des ressources matérielles existantes pour les infrastructures Synology.",
-        "interet_perso": "Très utile pour les passionnés de Home Lab ou les propriétaires de NAS Synology souhaitant expérimenter avec différentes configurations de DSM sans acquérir de matériel supplémentaire. Idéal pour des environnements de test isolés.",
-        "mise_en_oeuvre": "Informatif. Potentiellement : Tester l'implémentation de Virtual DSM pour des cas d'usage spécifiques (ex: sandbox, environnements de test de nouvelles applications sur NAS).",
-        "fiabilite": "Élevée - Tutoriel technique de IT-Connect, une source fiable pour les guides Synology.",
-        "score": 6,
-        "link": "https://www.it-connect.fr/virtual-dsm-comment-et-pourquoi-creer-une-machine-virtuelle-dsm-sur-un-nas-synology/",
-        "date": "2025-11-27T17:00:00.000Z"
-    },
-    {
-        "titre": "Déployer Virtual DSM avec Docker : Un guide pas à pas pour les NAS Synology",
-        "resume": "Ce tutoriel détaillé montre comment installer et configurer Virtual DSM (vDSM) au sein d'un conteneur Docker. Cette méthode offre une alternative innovante pour virtualiser l'environnement Synology, apportant les avantages de portabilité, de gestion des ressources et d'isolation qu'offre la conteneurisation Docker. La personnalisation de la configuration du conteneur est également abordée.",
-        "interet_pro": "Intéressant pour les administrateurs systèmes qui gèrent des infrastructures basées sur Docker et qui souhaitent intégrer des instances DSM virtuelles dans un environnement conteneurisé. Offre une flexibilité accrue pour le déploiement et la gestion des services.",
-        "interet_perso": "Pour les utilisateurs avancés de Home Lab, c'est une excellente opportunité d'expérimenter avec Docker et Virtual DSM. Cela permet de comprendre les interactions et les avantages de la conteneurisation pour des systèmes plus complexes.",
-        "mise_en_oeuvre": "Informatif. Potentiellement : Évaluer cette méthode pour le déploiement de vDSM dans des environnements de test ou de développement, en tirant parti des principes DevOps.",
-        "fiabilite": "Élevée - Tutoriel technique de IT-Connect, une source fiable et reconnue.",
-        "score": 6,
-        "link": "https://www.it-connect.fr/tuto-virtual-dsm-avec-docker/",
-        "date": "2025-11-27T16:59:00.000Z"
-    },
-    {
-        "titre": "Renforcement de la sécurité de la page de connexion Microsoft Entra ID contre les injections de scripts",
-        "resume": "Microsoft implémente une nouvelle politique de sécurité de contenu (CSP) sur l'interface de connexion d'Entra ID. Cette mesure vise à bloquer l'injection de scripts externes malveillants, améliorant ainsi la résilience face aux attaques. C'est une protection proactive contre des vecteurs d'attaque courants ciblant l'authentification.",
-        "interet_pro": "Essentiel pour les administrateurs de services d'identité (IAM) et les CISO. Cette mise à jour renforce la posture de sécurité des accès cloud et réduit le risque d'attaques par script injection sur les pages de connexion. Une meilleure protection de l'authentification est cruciale pour la sécurité globale de l'entreprise et la conformité.",
-        "interet_perso": "N/A",
-        "mise_en_oeuvre": "Informatif. Aucune action immédiate requise par les administrateurs, la protection est implémentée par Microsoft. Il est cependant recommandé de rester informé des évolutions de sécurité d'Entra ID et des bonnes pratiques d'authentification.",
-        "fiabilite": "Élevée - Information provenant directement des annonces et déploiements de Microsoft, relayée par un blog technique reconnu.",
-        "score": 9,
-        "link": "https://www.it-connect.fr/microsoft-entra-id-la-page-de-connexion-se-renforce-face-aux-attaques-par-injection-de-scripts/",
-        "date": "2025-11-27T05:38:45.000Z"
-    },
-    {
-        "titre": "Bug critique de Windows 11 24H2 : Menu Démarrer et Barre des tâches inutilisables",
-        "resume": "Un nouveau bug majeur dans Windows 11, spécifiquement après l'installation de la mise à jour KB5072911 et les suivantes, rend le menu Démarrer et la barre des tâches totalement inutilisables. Ce dysfonctionnement paralyse l'accès aux fonctionnalités de base du système, affectant gravement l'expérience utilisateur et la productivité.",
-        "interet_pro": "Très important pour les SysAdmins et les équipes de support. Ce bug entraîne une perte significative de productivité et une augmentation des appels au support, car les postes de travail deviennent difficilement utilisables. Une intervention rapide est nécessaire pour identifier les machines impactées et appliquer des correctifs ou des contournements.",
-        "interet_perso": "Critique pour tout utilisateur de Windows 11 24H2. Ce bug rend l'ordinateur quasiment inutilisable pour des tâches quotidiennes, nécessitant une recherche de solution ou une restauration système.",
-        "mise_en_oeuvre": "Identifier les machines sous Windows 11 24H2 ayant installé la KB5072911 ou des mises à jour ultérieures. Bloquer le déploiement de ces mises à jour si possible via les outils de gestion de patchs. Rechercher activement des solutions de contournement ou attendre un correctif officiel de Microsoft. Communiquer sur le problème aux utilisateurs impactés.",
-        "fiabilite": "Élevée - Problème majeur et largement rapporté, avec une identification claire des mises à jour en cause par un blog technique reconnu.",
-        "score": 9,
-        "link": "https://www.it-connect.fr/ce-bug-windows-11-24h2-rend-inutilisable-le-menu-demarrer-et-la-barre-des-taches/",
-        "date": "2025-11-26T05:44:46.000Z"
-    },
-    {
-        "titre": "Windows 11 ignore les stratégies de redémarrage Windows Update après la mise à jour de novembre",
-        "resume": "Suite à la mise à jour de novembre 2025 (KB5068861), des machines sous Windows 11 redémarrent de manière inattendue, ignorant les politiques de groupe (GPO) définies pour Windows Update. Ce comportement peut perturber l'activité des utilisateurs, entraînant des pertes de travail et des interruptions de service imprévues. Il s'agit d'un bug impactant la gestion des patchs.",
-        "interet_pro": "Critique pour les SysAdmins et DSI. La gestion des redémarrages est fondamentale pour la stabilité des postes de travail et serveurs. Ce bug compromet le contrôle sur le déploiement des patchs et peut entraîner des perturbations opérationnelles significatives. Une vérification rapide des systèmes est recommandée.",
-        "interet_perso": "Important pour les utilisateurs avancés de Windows 11 gérant leurs mises à jour. Peut causer des redémarrages imprévus et la perte de travail non sauvegardé. Nécessite une attention particulière pour éviter des désagréments.",
-        "mise_en_oeuvre": "Surveiller les rapports de Microsoft concernant ce bug. Tester les GPO de Windows Update sur un échantillon restreint avant un déploiement large. Envisager de suspendre temporairement la mise à jour KB5068861 si des impacts critiques sont constatés en production.",
-        "fiabilite": "Élevée - Information rapportée par un blog technique reconnu avec des détails précis sur la KB et le comportement. Des témoignages d'utilisateurs concordent souvent avec ce type de problème.",
-        "score": 8,
-        "link": "https://www.it-connect.fr/windows-11-ignore-votre-strategie-windows-update-et-redemarre-sans-prevenir-que-se-passe-t-il/",
-        "date": "2025-11-26T06:22:48.000Z"
-    },
-    {
-        "titre": "Guide de configuration du service NTP (w32tm) sous Windows Server",
-        "resume": "Ce tutoriel détaillé explique comment configurer correctement le service de temps NTP (w32time) sur Windows Server, incluant les versions 2025, 2022 ou antérieure. Il aborde l'importance d'une synchronisation horaire précise pour la sécurité, la cohérence des logs et l'interopérabilité des systèmes. La commande `w32tm` est l'outil central de cette configuration.",
-        "interet_pro": "Important pour tout SysAdmin et ingénieur réseau. Une synchronisation horaire précise est fondamentale pour l'authentification (Kerberos), la journalisation des événements (forensics), la réplication des données et le bon fonctionnement des applications distribuées. Une mauvaise configuration peut entraîner des problèmes de sécurité et d'interopérabilité critiques. Ce guide est une ressource pratique.",
-        "interet_perso": "Utile pour les utilisateurs de Home Lab ou ceux qui gèrent des serveurs personnels, afin d'assurer la fiabilité de leur infrastructure et le bon fonctionnement des services dépendants d'une heure précise.",
-        "mise_en_oeuvre": "Vérifier la configuration NTP actuelle des serveurs Windows de l'infrastructure. Appliquer les bonnes pratiques de configuration `w32tm`, en s'assurant que les serveurs sont synchronisés avec des sources de temps fiables. Documenter la configuration pour une meilleure gestion et maintenance.",
-        "fiabilite": "Élevée - Tutoriel technique clair et bien structuré, basé sur des commandes officielles et des pratiques établies pour Windows Server.",
-        "score": 7,
-        "link": "https://www.it-connect.fr/configurer-le-ntp-sous-windows-server-2012/",
-        "date": "2025-11-26T08:05:07.000Z"
-    },
-    {
-        "titre": "Alerte CERT-FR : Attaque massive par la chaîne d'approvisionnement NPM",
-        "resume": "Le CERT-FR a émis une alerte concernant une attaque par la chaîne d'approvisionnement ciblant des paquets NPM, débutée le 23 novembre 2025. Plus de 700 paquets ont été compromis par un logiciel malveillant auto-réplicatif. Seules des versions spécifiques de ces paquets sont affectées, nécessitant une vigilance particulière.",
-        "interet_pro": "Pour les SysAdmins et CISOs, cette alerte est critique en raison de l'impact potentiel sur les chaînes de développement logicielles (CI/CD) et la sécurité des applications. Il est impératif d'auditer toutes les dépendances NPM en production et développement, d'identifier les versions compromises et de les remplacer sans délai pour prévenir l'injection de code malveillant dans les systèmes d'entreprise.",
-        "interet_perso": "N/A",
-        "mise_en_oeuvre": "Analyser immédiatement toutes les bases de code pour identifier les dépendances NPM compromises mentionnées par le CERT-FR. Mettre en place ou renforcer des outils d'analyse de vulnérabilités (ex: `npm audit`, Snyk) pour la détection de paquets malveillants. Isoler les environnements de développement et de production affectés. Appliquer une politique de verrouillage des versions de dépendances (package-lock.json).",
-        "fiabilite": "Élevée - Source officielle (CERT-FR, agence nationale de cybersécurité française).",
-        "score": 9,
-        "link": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-051/",
-        "date": "2025-11-27T00:00:00.000Z"
-    }
+  {
+    "titre": "Alerte : Un bug critique de Windows 11 24H2 rend le système inutilisable",
+    "resume": "Un bug majeur, lié à la mise à jour KB5072911 et ses suivantes, affecte Windows 11 version 24H2, rendant le Menu Démarrer, la Barre des Tâches et l'Explorateur de fichiers inopérants. Ce dysfonctionnement rend le système d'exploitation quasi inutilisable pour les utilisateurs affectés, compromettant l'accès aux fonctionnalités de base.",
+    "interet_pro": "Impact opérationnel extrêmement élevé pour les entreprises. Les postes de travail Windows 11 24H2 affectés sont inexploitables, entraînant une interruption totale des activités pour les utilisateurs. Une identification rapide des machines impactées et l'application de correctifs ou de contournements d'urgence sont impératives.",
+    "interet_perso": "Impact critique pour les utilisateurs à domicile, rendant l'ordinateur personnel impraticable. Il est conseillé de suspendre les mises à jour Windows Update et de consulter les forums officiels pour des solutions ou des informations.",
+    "mise_en_oeuvre": "Isoler les postes affectés, désinstaller la KB5072911, suspendre les mises à jour Windows 11 24H2, suivre les communications de Microsoft pour un correctif d'urgence.",
+    "fiabilite": "Élevée - Bug largement rapporté par la communauté technique et les utilisateurs, bien que Microsoft n'ait pas encore communiqué officiellement une solution. Source technique reconnue.",
+    "score": 10,
+    "link": "https://www.it-connect.fr/ce-bug-windows-11-24h2-rend-inutilisable-le-menu-demarrer-et-la-barre-des-taches/",
+    "date": "2025-11-26T05:44:46.000Z"
+  },
+  {
+    "titre": "Alerte Urgente CERT-FR : Compromission Massive de Paquets NPM via Attaque Supply Chain",
+    "resume": "Le CERT-FR signale une attaque majeure par la chaîne d'approvisionnement ciblant de nombreux paquets NPM, débutée le 23 novembre 2025 et affectant plus de 700 paquets. Cette compromission est amplifiée par un logiciel malveillant auto-réplicatif. Seules des versions spécifiques, les plus téléchargées, sont impactées.",
+    "interet_pro": "EXTRÊMEMENT important pour toute entreprise utilisant des dépendances NPM dans ses projets de développement. Nécessite une vérification immédiate des dépendances de projet, une analyse des SBOMs (Software Bill of Materials) et une possible mise à jour ou suppression des versions compromises. Le risque de compromission des applications, des chaînes CI/CD et des données est élevé.",
+    "interet_perso": "Très pertinent pour les développeurs utilisant NPM pour leurs projets personnels ou open source. Il est crucial de vérifier les dépendances de vos propres projets et de rester vigilant face aux mises à jour non sollicitées de paquets critiques.",
+    "mise_en_oeuvre": "URGENT : Identifier tous les projets utilisant des paquets NPM. Vérifier les versions des paquets utilisés par rapport à la liste des versions compromises publiée par le CERT-FR. Mettre à jour les paquets à des versions sûres ou les supprimer si nécessaire. Analyser les systèmes pour détecter toute activité suspecte ou présence du malware auto-réplicatif. Renforcer la sécurité des chaînes d'approvisionnement logicielles.",
+    "fiabilite": "Élevée - Alerte spécifique et directe du CERT-FR, source officielle et de référence pour la cybersécurité en France.",
+    "score": 10,
+    "link": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-051/",
+    "date": "2025-11-27T00:00:00.000Z"
+  },
+  {
+    "titre": "Azure Bastion : Authentification Entra ID désormais supportée pour les connexions RDP",
+    "resume": "Microsoft a annoncé la prise en charge de l'authentification Entra ID (anciennement Azure AD) pour les connexions RDP via Azure Bastion. Cette évolution renforce la sécurité des accès aux machines virtuelles dans Azure. Elle permet une gestion centralisée des identités et des contrôles d'accès pour les sessions RDP.",
+    "interet_pro": "Cette fonctionnalité est cruciale pour les entreprises utilisant Azure. Elle permet de consolider l'authentification des accès RDP via le bastion Cloud avec Entra ID, améliorant la traçabilité, la conformité et la sécurité des accès privilégiés aux VMs. Elle simplifie également la gestion des identités et des politiques d'accès à grande échelle.",
+    "interet_perso": "N/A",
+    "mise_en_oeuvre": "Vérifier la compatibilité des configurations existantes et planifier l'intégration de l'authentification Entra ID pour les nouvelles configurations Azure Bastion afin de renforcer la posture de sécurité et la conformité.",
+    "fiabilite": "Élevée - Annonce officielle de Microsoft relayée par un blog spécialisé reconnu.",
+    "score": 9,
+    "link": "https://www.it-connect.fr/azure-bastion-prend-desormais-en-charge-lauthentification-entra-id-pour-les-connexions-rdp/",
+    "date": "2025-11-28T15:45:00.000Z"
+  },
+  {
+    "titre": "Fuite de Données Majeure chez Mixpanel impactant les Utilisateurs d'OpenAI (ChatGPT)",
+    "resume": "Le prestataire Mixpanel a subi une fuite de données, exposant des informations d'utilisateurs d'OpenAI, notamment ChatGPT. Bien que les données spécifiques n'aient pas été détaillées par OpenAI, l'incident souligne les risques liés aux prestataires tiers. Les implications potentielles pour la confidentialité et la sécurité des données utilisateur sont significatives.",
+    "interet_pro": "Cet incident met en lumière la chaîne de supply logicielle et les risques inhérents aux prestataires tiers. Les entreprises utilisant des services comme OpenAI doivent réévaluer la sécurité de leurs données auprès de leurs fournisseurs et anticiper les impacts potentiels sur la conformité (RGPD, etc.).",
+    "interet_perso": "Les utilisateurs de ChatGPT doivent rester vigilants face au phishing et aux tentatives d'ingénierie sociale suite à cette exposition. Il est recommandé de vérifier les notifications officielles d'OpenAI et d'activer l'authentification multifacteur si disponible.",
+    "mise_en_oeuvre": "Vérifier la politique de sécurité des prestataires tiers, sensibiliser les utilisateurs aux risques de phishing post-fuite, surveiller les annonces officielles d'OpenAI.",
+    "fiabilite": "Élevée - Blog technique reconnu",
+    "score": 9,
+    "link": "https://www.it-connect.fr/openai-chatgpt-une-fuite-de-donnees-chez-le-prestataire-mixpanel/",
+    "date": "2025-11-27T19:00:00.000Z"
+  },
+  {
+    "titre": "Windows 11 : Un bug de mise à jour force les redémarrages et ignore les stratégies GPO",
+    "resume": "Suite à la mise à jour de novembre 2025 (KB5068861), des machines Windows 11 redémarrent de manière inopinée, ignorant les stratégies de groupe (GPO) de Windows Update. Ce comportement impacte la planification et le contrôle des maintenances, pouvant entraîner des interruptions de service imprévues et des pertes de données potentielles.",
+    "interet_pro": "Problème majeur pour les SysAdmins et les équipes IT gérant des parcs Windows 11. Ce bug compromet la gestion centralisée des mises à jour, la stabilité des postes de travail et peut entraîner des pertes de productivité. Il est crucial d'identifier les machines affectées et de chercher des solutions ou contournements.",
+    "interet_perso": "Impact significatif pour les utilisateurs de Windows 11 à domicile, qui pourraient subir des redémarrages imprévus et des interruptions de travail. Une vigilance accrue sur les mises à jour et les sauvegardes est recommandée.",
+    "mise_en_oeuvre": "Identifier la KB5068861, surveiller les postes Windows 11, rechercher des solutions Microsoft ou des contournements via scripting/registre, ou bloquer temporairement la mise à jour si possible.",
+    "fiabilite": "Élevée - Bug rapporté par des utilisateurs et relayé par des sources techniques fiables, nécessitant une confirmation officielle de Microsoft.",
+    "score": 9,
+    "link": "https://www.it-connect.fr/windows-11-ignore-votre-strategie-windows-update-et-redemarre-sans-prevenir-que-se-passe-t-il/",
+    "date": "2025-11-26T06:22:48.000Z"
+  },
+  {
+    "titre": "Microsoft Entra ID : Sécurité renforcée contre l'injection de scripts via une politique CSP",
+    "resume": "Microsoft met en place une nouvelle politique de sécurité de contenu (CSP) pour sa page de connexion Entra ID. Cette mesure vise à bloquer activement l'injection de scripts externes malveillants, améliorant ainsi la résilience face aux attaques de type Cross-Site Scripting (XSS) et autres injections sur la page d'authentification.",
+    "interet_pro": "Essentiel pour les SysAdmins et CISOs utilisant Microsoft Entra ID. Cette mise à jour renforce la sécurité des authentifications, réduisant le risque de compromission des identités via des attaques client-side. Aucune action immédiate requise, mais la connaissance de cette protection est cruciale pour l'évaluation des risques.",
+    "interet_perso": "N/A - Principalement pertinent pour les environnements d'entreprise utilisant Entra ID. Les particuliers n'ont pas d'action directe à entreprendre.",
+    "mise_en_oeuvre": "Informatif - Suivre les annonces Microsoft sur les déploiements de CSP pour Entra ID et s'assurer que les configurations client sont compatibles.",
+    "fiabilite": "Élevée - Information provenant directement des mises à jour de Microsoft, relayée par un blog technique reconnu.",
+    "score": 9,
+    "link": "https://www.it-connect.fr/microsoft-entra-id-la-page-de-connexion-se-renforce-face-aux-attaques-par-injection-de-scripts/",
+    "date": "2025-11-27T05:38:45.000Z"
+  }
 ]
