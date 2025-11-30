@@ -10,40 +10,48 @@ let techCache = {
     ttl: 15 * 60 * 1000 // 15 minutes
 };
 
+// Extraction de la source depuis l'URL
+function getSourceFromUrl(url) {
+    try {
+        const hostname = new URL(url).hostname;
+        return hostname.replace('www.', '');
+    } catch (e) {
+        return 'Veille';
+    }
+}
+
 // Mappage des images par source (Fallback intelligent)
-function getSourceImage(source) {
-    const sourceLower = (source || '').toLowerCase();
-    
-    if (sourceLower.includes('it connect') || sourceLower.includes('it-connect')) {
+function getSourceImage(url) {
+    const sourceLower = getSourceFromUrl(url).toLowerCase();
+
+    if (sourceLower.includes('it-connect')) {
         return 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=250&fit=crop'; // Tech/Network
     }
     if (sourceLower.includes('zdnet')) {
         return 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop'; // Business/Tech
     }
-    if (sourceLower.includes('cert') || sourceLower.includes('securite') || sourceLower.includes('security')) {
+    if (sourceLower.includes('cert') || sourceLower.includes('gouv')) {
         return 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop'; // Security/Lock
     }
-    if (sourceLower.includes('lmi')) {
-        return 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=250&fit=crop'; // Server/Infra
+    if (sourceLower.includes('lemonde') || sourceLower.includes('figaro')) {
+        return 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=400&h=250&fit=crop'; // News
     }
-    
+
     // Image par défaut "High Tech"
     return 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop';
 }
 
-function getBugattiTrendEmoji(source) {
-    // Emoji basé sur la source pour donner un peu de vie
-    const sourceLower = (source || '').toLowerCase();
-    if (sourceLower.includes('cert')) return '🛡️';
-    if (sourceLower.includes('it connect')) return '🔌';
-    if (sourceLower.includes('zdnet')) return '📰';
-    return '🚀';
+function getBugattiTrendEmoji(score) {
+    if (score >= 9) return '🔥'; // Hot/Critical
+    if (score >= 7) return '🚀'; // Important
+    if (score >= 5) return '💡'; // Interesting
+    return '📰'; // Normal
 }
 
 // ===== FONCTION PRINCIPALE =====
 
 async function fetchEmergingTechnologies() {
-    console.log('🏎️ Actualisation de la veille technologique (Source JSON)...');
+    console.log('🏎️ Actualisation de la veille technologique (Source JSON N8N)...');
 
     const containerElement = document.getElementById('articles-container');
     if (!containerElement) {
@@ -110,7 +118,7 @@ async function fetchEmergingTechnologies() {
                 <i class="fas fa-exclamation-triangle me-2"></i>
                 <div>
                     <strong>Erreur lors du chargement de la veille :</strong> ${error.message}<br>
-                    <small>Vérifiez que le fichier ${JSON_SOURCE} existe.</small>
+                    <small>Vérifiez que le fichier ${JSON_SOURCE} existe et respecte le format.</small>
                 </div>
             </div>
         `;
@@ -130,31 +138,55 @@ function displayVeilleTechnologique(articles) {
     }
 
     containerElement.innerHTML = articles.map(article => {
-        const image = getSourceImage(article.source);
+        const image = getSourceImage(article.link);
+        const sourceName = getSourceFromUrl(article.link);
         const date = new Date(article.date).toLocaleDateString('fr-FR', {
             day: 'numeric', month: 'long', year: 'numeric'
         });
-        const emoji = getBugattiTrendEmoji(article.source);
+        const emoji = getBugattiTrendEmoji(article.score || 5);
+        const scoreBadge = article.score ? `<span class="badge bg-info text-dark ms-2"><i class="fas fa-star me-1"></i>${article.score}/10</span>` : '';
 
         return `
         <div class="col-md-6 col-lg-4">
             <div class="card bg-dark-surface border-0 shadow-lg h-100 overflow-hidden hover-lift transition-all">
                 <div class="position-relative">
-                    <img src="${image}" alt="${article.title}" class="card-img-top" style="height: 200px; object-fit: cover;">
+                    <img src="${image}" alt="${article.titre}" class="card-img-top" style="height: 200px; object-fit: cover;">
                     <div class="position-absolute top-0 end-0 m-3">
-                        <span class="badge bg-primary-gradient shadow-sm">${article.source || 'Veille'}</span>
+                        <span class="badge bg-primary-gradient shadow-sm">${sourceName}</span>
                     </div>
                 </div>
                 <div class="card-body p-4 d-flex flex-column">
-                    <div class="mb-2 text-primary small fw-bold">
-                        <i class="far fa-calendar-alt me-1"></i> ${date}
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div class="text-primary small fw-bold">
+                            <i class="far fa-calendar-alt me-1"></i> ${date}
+                        </div>
+                        ${scoreBadge}
                     </div>
-                    <h5 class="card-title text-white fw-bold mb-3 line-clamp-2" title="${article.title}">
-                        ${emoji} ${article.title}
+                    
+                    <h5 class="card-title text-white fw-bold mb-3 line-clamp-2" title="${article.titre}">
+                        ${emoji} ${article.titre}
                     </h5>
-                    <p class="card-text text-gray-400 small mb-4 line-clamp-3 flex-grow-1">
-                        ${article.summary}
+                    
+                    <p class="card-text text-gray-300 small mb-3 line-clamp-3">
+                        ${article.resume}
                     </p>
+
+                    ${article.interet_pro ? `
+                    <div class="p-2 rounded mb-2 border-start border-3 border-primary" style="background-color: rgba(0, 0, 0, 0.2);">
+                        <p class="mb-0 small text-muted fst-italic line-clamp-2" title="${article.interet_pro}">
+                            <i class="fas fa-briefcase me-1"></i> ${article.interet_pro}
+                        </p>
+                    </div>
+                    ` : ''}
+
+                    ${article.interet_perso && article.interet_perso !== 'N/A' ? `
+                    <div class="p-2 rounded mb-3 border-start border-3 border-info" style="background-color: rgba(0, 0, 0, 0.2);">
+                        <p class="mb-0 small text-muted fst-italic line-clamp-2" title="${article.interet_perso}">
+                            <i class="fas fa-user me-1"></i> ${article.interet_perso}
+                        </p>
+                    </div>
+                    ` : ''}
+
                     <a href="${article.link}" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm rounded-pill align-self-start mt-auto">
                         Lire l'article <i class="fas fa-external-link-alt ms-1"></i>
                     </a>
@@ -177,7 +209,7 @@ setInterval(() => {
 
 // Chargement automatique
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('🏎️ Système veille N8N initialisé');
+    console.log('🏎️ Système veille N8N initialisé (Nouvelle Structure)');
     setTimeout(fetchEmergingTechnologies, 500);
 });
 
