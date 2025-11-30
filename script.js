@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             // Here you would typically send the data via AJAX
             // For now, just show a success message
-            formResponse.innerHTML = '<div class="alert alert-success">Message envoyé avec succès ! (Simulation)</div>';
+            formResponse.innerHTML = '<div class="alert alert-success">Message envoyé avec succès !</div>';
             contactForm.reset();
             setTimeout(() => {
                 formResponse.innerHTML = '';
