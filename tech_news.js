@@ -42,9 +42,9 @@ function getSourceImage(url) {
 }
 
 function getBugattiTrendEmoji(score) {
-    if (score >= 9) return '🔥'; // Hot/Critical
-    if (score >= 7) return '🚀'; // Important
-    if (score >= 5) return '💡'; // Interesting
+    if (score >= 90) return '🔥'; // Hot/Critical
+    if (score >= 70) return '🚀'; // Important
+    if (score >= 50) return '💡'; // Interesting
     return '📰'; // Normal
 }
 
@@ -144,7 +144,7 @@ function displayVeilleTechnologique(articles) {
             day: 'numeric', month: 'long', year: 'numeric'
         });
         const emoji = getBugattiTrendEmoji(article.score || 5);
-        const scoreBadge = article.score ? `<span class="badge bg-info text-dark ms-2"><i class="fas fa-star me-1"></i>${article.score}/10</span>` : '';
+        const scoreBadge = article.score ? `<span class="badge bg-info text-dark ms-2"><i class="fas fa-star me-1"></i>${article.score}/100</span>` : '';
 
         return `
         <div class="col-md-6 col-lg-4">
