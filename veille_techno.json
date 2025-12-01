@@ -1,68 +1,24 @@
 [
   {
-    "titre": "Alerte : Un bug critique de Windows 11 24H2 rend le système inutilisable",
-    "resume": "Un bug majeur, lié à la mise à jour KB5072911 et ses suivantes, affecte Windows 11 version 24H2, rendant le Menu Démarrer, la Barre des Tâches et l'Explorateur de fichiers inopérants. Ce dysfonctionnement rend le système d'exploitation quasi inutilisable pour les utilisateurs affectés, compromettant l'accès aux fonctionnalités de base.",
-    "interet_pro": "Impact opérationnel extrêmement élevé pour les entreprises. Les postes de travail Windows 11 24H2 affectés sont inexploitables, entraînant une interruption totale des activités pour les utilisateurs. Une identification rapide des machines impactées et l'application de correctifs ou de contournements d'urgence sont impératives.",
-    "interet_perso": "Impact critique pour les utilisateurs à domicile, rendant l'ordinateur personnel impraticable. Il est conseillé de suspendre les mises à jour Windows Update et de consulter les forums officiels pour des solutions ou des informations.",
-    "mise_en_oeuvre": "Isoler les postes affectés, désinstaller la KB5072911, suspendre les mises à jour Windows 11 24H2, suivre les communications de Microsoft pour un correctif d'urgence.",
-    "fiabilite": "Élevée - Bug largement rapporté par la communauté technique et les utilisateurs, bien que Microsoft n'ait pas encore communiqué officiellement une solution. Source technique reconnue.",
-    "score": 10,
-    "link": "https://www.it-connect.fr/ce-bug-windows-11-24h2-rend-inutilisable-le-menu-demarrer-et-la-barre-des-taches/",
-    "date": "2025-11-26T05:44:46.000Z"
-  },
-  {
-    "titre": "Alerte Urgente CERT-FR : Compromission Massive de Paquets NPM via Attaque Supply Chain",
-    "resume": "Le CERT-FR signale une attaque majeure par la chaîne d'approvisionnement ciblant de nombreux paquets NPM, débutée le 23 novembre 2025 et affectant plus de 700 paquets. Cette compromission est amplifiée par un logiciel malveillant auto-réplicatif. Seules des versions spécifiques, les plus téléchargées, sont impactées.",
-    "interet_pro": "EXTRÊMEMENT important pour toute entreprise utilisant des dépendances NPM dans ses projets de développement. Nécessite une vérification immédiate des dépendances de projet, une analyse des SBOMs (Software Bill of Materials) et une possible mise à jour ou suppression des versions compromises. Le risque de compromission des applications, des chaînes CI/CD et des données est élevé.",
-    "interet_perso": "Très pertinent pour les développeurs utilisant NPM pour leurs projets personnels ou open source. Il est crucial de vérifier les dépendances de vos propres projets et de rester vigilant face aux mises à jour non sollicitées de paquets critiques.",
-    "mise_en_oeuvre": "URGENT : Identifier tous les projets utilisant des paquets NPM. Vérifier les versions des paquets utilisés par rapport à la liste des versions compromises publiée par le CERT-FR. Mettre à jour les paquets à des versions sûres ou les supprimer si nécessaire. Analyser les systèmes pour détecter toute activité suspecte ou présence du malware auto-réplicatif. Renforcer la sécurité des chaînes d'approvisionnement logicielles.",
-    "fiabilite": "Élevée - Alerte spécifique et directe du CERT-FR, source officielle et de référence pour la cybersécurité en France.",
-    "score": 10,
-    "link": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-051/",
-    "date": "2025-11-27T00:00:00.000Z"
-  },
-  {
-    "titre": "Azure Bastion : Authentification Entra ID désormais supportée pour les connexions RDP",
-    "resume": "Microsoft a annoncé la prise en charge de l'authentification Entra ID (anciennement Azure AD) pour les connexions RDP via Azure Bastion. Cette évolution renforce la sécurité des accès aux machines virtuelles dans Azure. Elle permet une gestion centralisée des identités et des contrôles d'accès pour les sessions RDP.",
-    "interet_pro": "Cette fonctionnalité est cruciale pour les entreprises utilisant Azure. Elle permet de consolider l'authentification des accès RDP via le bastion Cloud avec Entra ID, améliorant la traçabilité, la conformité et la sécurité des accès privilégiés aux VMs. Elle simplifie également la gestion des identités et des politiques d'accès à grande échelle.",
+    "titre": "Fuite de données à la FFF : Un rappel brutal sur la sécurité des comptes salariés",
+    "resume": "La Fédération française de football (FFF) a subi un piratage entraînant la fuite de données de licenciés. L'incident est attribué à la compromission d'un compte d'un salarié. Cela souligne la vulnérabilité des organisations face aux attaques ciblant les identifiants d'employés.",
+    "interet_pro": "Extrêmement important pour les CISO, RSSI et équipes de sécurité. Met en lumière la criticité de la gestion des identités et accès (IAM), la formation à la sensibilisation aux risques (phishing), et l'implémentation de l'authentification multifacteur (MFA). C'est un cas d'étude réel pour renforcer les politiques de sécurité interne et la protection des données personnelles (RGPD).",
     "interet_perso": "N/A",
-    "mise_en_oeuvre": "Vérifier la compatibilité des configurations existantes et planifier l'intégration de l'authentification Entra ID pour les nouvelles configurations Azure Bastion afin de renforcer la posture de sécurité et la conformité.",
-    "fiabilite": "Élevée - Annonce officielle de Microsoft relayée par un blog spécialisé reconnu.",
+    "mise_en_oeuvre": "Auditer les processus de gestion des identités et accès, renforcer la sensibilisation des employés aux menaces, déployer le MFA sur tous les comptes critiques, et réévaluer les plans de réponse aux incidents de sécurité.",
+    "fiabilite": "Moyenne - Blog technique relayant une information initialement révélée par la FFF. La source directe est fiable pour relayer l'information.",
     "score": 9,
-    "link": "https://www.it-connect.fr/azure-bastion-prend-desormais-en-charge-lauthentification-entra-id-pour-les-connexions-rdp/",
-    "date": "2025-11-28T15:45:00.000Z"
+    "link": "https://www.it-connect.fr/la-federation-francaise-de-football-fff-victime-dun-piratage-des-donnees-de-licencies-volees/",
+    "date": "2025-12-01T07:52:30.000Z"
   },
   {
-    "titre": "Fuite de Données Majeure chez Mixpanel impactant les Utilisateurs d'OpenAI (ChatGPT)",
-    "resume": "Le prestataire Mixpanel a subi une fuite de données, exposant des informations d'utilisateurs d'OpenAI, notamment ChatGPT. Bien que les données spécifiques n'aient pas été détaillées par OpenAI, l'incident souligne les risques liés aux prestataires tiers. Les implications potentielles pour la confidentialité et la sécurité des données utilisateur sont significatives.",
-    "interet_pro": "Cet incident met en lumière la chaîne de supply logicielle et les risques inhérents aux prestataires tiers. Les entreprises utilisant des services comme OpenAI doivent réévaluer la sécurité de leurs données auprès de leurs fournisseurs et anticiper les impacts potentiels sur la conformité (RGPD, etc.).",
-    "interet_perso": "Les utilisateurs de ChatGPT doivent rester vigilants face au phishing et aux tentatives d'ingénierie sociale suite à cette exposition. Il est recommandé de vérifier les notifications officielles d'OpenAI et d'activer l'authentification multifacteur si disponible.",
-    "mise_en_oeuvre": "Vérifier la politique de sécurité des prestataires tiers, sensibiliser les utilisateurs aux risques de phishing post-fuite, surveiller les annonces officielles d'OpenAI.",
-    "fiabilite": "Élevée - Blog technique reconnu",
-    "score": 9,
-    "link": "https://www.it-connect.fr/openai-chatgpt-une-fuite-de-donnees-chez-le-prestataire-mixpanel/",
-    "date": "2025-11-27T19:00:00.000Z"
-  },
-  {
-    "titre": "Windows 11 : Un bug de mise à jour force les redémarrages et ignore les stratégies GPO",
-    "resume": "Suite à la mise à jour de novembre 2025 (KB5068861), des machines Windows 11 redémarrent de manière inopinée, ignorant les stratégies de groupe (GPO) de Windows Update. Ce comportement impacte la planification et le contrôle des maintenances, pouvant entraîner des interruptions de service imprévues et des pertes de données potentielles.",
-    "interet_pro": "Problème majeur pour les SysAdmins et les équipes IT gérant des parcs Windows 11. Ce bug compromet la gestion centralisée des mises à jour, la stabilité des postes de travail et peut entraîner des pertes de productivité. Il est crucial d'identifier les machines affectées et de chercher des solutions ou contournements.",
-    "interet_perso": "Impact significatif pour les utilisateurs de Windows 11 à domicile, qui pourraient subir des redémarrages imprévus et des interruptions de travail. Une vigilance accrue sur les mises à jour et les sauvegardes est recommandée.",
-    "mise_en_oeuvre": "Identifier la KB5068861, surveiller les postes Windows 11, rechercher des solutions Microsoft ou des contournements via scripting/registre, ou bloquer temporairement la mise à jour si possible.",
-    "fiabilite": "Élevée - Bug rapporté par des utilisateurs et relayé par des sources techniques fiables, nécessitant une confirmation officielle de Microsoft.",
-    "score": 9,
-    "link": "https://www.it-connect.fr/windows-11-ignore-votre-strategie-windows-update-et-redemarre-sans-prevenir-que-se-passe-t-il/",
-    "date": "2025-11-26T06:22:48.000Z"
-  },
-  {
-    "titre": "Microsoft Entra ID : Sécurité renforcée contre l'injection de scripts via une politique CSP",
-    "resume": "Microsoft met en place une nouvelle politique de sécurité de contenu (CSP) pour sa page de connexion Entra ID. Cette mesure vise à bloquer activement l'injection de scripts externes malveillants, améliorant ainsi la résilience face aux attaques de type Cross-Site Scripting (XSS) et autres injections sur la page d'authentification.",
-    "interet_pro": "Essentiel pour les SysAdmins et CISOs utilisant Microsoft Entra ID. Cette mise à jour renforce la sécurité des authentifications, réduisant le risque de compromission des identités via des attaques client-side. Aucune action immédiate requise, mais la connaissance de cette protection est cruciale pour l'évaluation des risques.",
-    "interet_perso": "N/A - Principalement pertinent pour les environnements d'entreprise utilisant Entra ID. Les particuliers n'ont pas d'action directe à entreprendre.",
-    "mise_en_oeuvre": "Informatif - Suivre les annonces Microsoft sur les déploiements de CSP pour Entra ID et s'assurer que les configurations client sont compatibles.",
-    "fiabilite": "Élevée - Information provenant directement des mises à jour de Microsoft, relayée par un blog technique reconnu.",
-    "score": 9,
-    "link": "https://www.it-connect.fr/microsoft-entra-id-la-page-de-connexion-se-renforce-face-aux-attaques-par-injection-de-scripts/",
-    "date": "2025-11-27T05:38:45.000Z"
+    "titre": "Sécurisation Linux : Maîtriser Fail2ban contre les attaques par force brute",
+    "resume": "Cet article détaille l'installation et la configuration de Fail2ban sur les serveurs Linux comme Debian ou Ubuntu. Il permet de détecter et bloquer automatiquement les adresses IP malveillantes tentant des attaques par force brute. Une défense essentielle pour tout service exposé sur internet.",
+    "interet_pro": "Crucial pour les SysAdmins et Ops DevOps afin de renforcer la sécurité périmétrique des serveurs Linux exposés. Aide à prévenir les tentatives de connexion illégitimes et les scans malveillants, réduisant ainsi la charge des logs et l'exposition aux attaques.",
+    "interet_perso": "Très pertinent pour les utilisateurs de Home Lab, les administrateurs de petits serveurs personnels ou NAS sous Linux. Permet de protéger des services comme SSH, web ou mail des tentatives de piratage.",
+    "mise_en_oeuvre": "Installer et configurer Fail2ban sur les serveurs Linux exposés, en adaptant les règles (jails) aux services critiques.",
+    "fiabilite": "Moyenne - Blog technique réputé pour ses tutoriels mais non source officielle de Fail2ban.",
+    "score": 7,
+    "link": "https://www.it-connect.fr/premiers-pas-avec-fail2ban/",
+    "date": "2025-12-01T11:25:06.000Z"
   }
 ]
