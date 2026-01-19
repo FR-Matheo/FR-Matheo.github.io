@@ -1,3 +1,101 @@
 [
-  {}
+  {
+    "titre": "Fuite de Données Majeure chez HubEE : 160 000 Documents Sensibles de l'État Français Compromis",
+    "resume": "La plateforme gouvernementale française HubEE a subi une intrusion, entraînant la fuite de 160 000 documents. Ces données incluent des informations sensibles, comme officiellement confirmé par la DINUM. Cet incident met en lumière une nouvelle vulnérabilité au sein des systèmes de l'État.",
+    "interet_pro": "Cet événement est crucial pour les CISOs et SysAdmins. Il souligne l'importance d'une sécurité robuste pour les plateformes publiques et la gestion des données sensibles, rappelant la nécessité d'audits réguliers, de politiques de protection des données strictes et d'une réponse rapide aux incidents. La conformité (RGPD, NIS2) est directement impactée.",
+    "interet_perso": "N/A",
+    "mise_en_oeuvre": "Informatif. Réévaluer les plans de réponse aux incidents, auditer les contrôles d'accès et la classification des données sensibles au sein de votre organisation. Servir de cas d'étude pour les formations en sensibilisation à la cybersécurité.",
+    "fiabilite": "Élevée - L'information est officielle, confirmée par la DINUM (Direction Interministérielle du Numérique). IT-Connect est une source d'information technique généralement fiable.",
+    "score": 95,
+    "link": "https://www.it-connect.fr/piratage-hubee-letat-confirme-la-fuite-de-160-000-documents-avec-des-donnees-sensibles/",
+    "date": "2026-01-16T17:26:39.000Z"
+  },
+  {
+    "titre": "Alerte Sécurité Majeure : Vulnérabilité CVE-2026-0227 dans PAN-OS désactivant les firewalls Palo Alto à distance",
+    "resume": "Une nouvelle faille de sécurité critique, CVE-2026-0227, affecte les firewalls Palo Alto sous PAN-OS. Cette vulnérabilité permet potentiellement à un attaquant de désactiver l'appareil à distance, ouvrant une brèche dans la sécurité périmétrique. Il est impératif d'appliquer les correctifs pour éviter une compromission majeure des infrastructures.",
+    "interet_pro": "Très élevé. La désactivation à distance d'un firewall représente un risque d'intrusion maximal. Les CISO et administrateurs réseau doivent évaluer l'exposition de leurs équipements Palo Alto et déployer les mises à jour sans délai, ce qui est crucial pour maintenir la défense de l'entreprise.",
+    "interet_perso": "N/A (Concerne des équipements d'entreprise spécialisés).",
+    "mise_en_oeuvre": "Appliquer immédiatement les correctifs fournis par Palo Alto Networks. Vérifier la version de PAN-OS et planifier une mise à jour d'urgence. Mettre en place une surveillance accrue des logs pour détecter toute activité anormale liée à la désactivation du firewall.",
+    "fiabilite": "Moyenne - Blog technique (IT-Connect). L'information est pertinente mais une vérification des bulletins de sécurité officiels de Palo Alto Networks (PSIRT) est fortement recommandée pour une faille de cette criticité.",
+    "score": 95,
+    "link": "https://www.it-connect.fr/palo-alto-networks-cve-2026-0227-firewalls/",
+    "date": "2026-01-15T13:32:03.000Z"
+  },
+  {
+    "titre": "Faille critique et exploit public dans Fortinet FortiSIEM (CVE-2025-64155)",
+    "resume": "Une vulnérabilité de sécurité critique (CVE-2025-64155) a été découverte dans Fortinet FortiSIEM, un outil de gestion des informations et événements de sécurité. Un exploit Proof-of-Concept (PoC) est déjà disponible, augmentant significativement le risque d'exploitation. Cette faille exige une attention et une réponse immédiates.",
+    "interet_pro": "Pour les CISO, SysAdmin et équipes SOC, cette alerte est de la plus haute criticité. La compromission de FortiSIEM, un système central de supervision de la sécurité, pourrait mener à un accès non autorisé à des données sensibles, à l'exfiltration d'informations ou à des interruptions de service critiques. L'existence d'un exploit public accélère la fenêtre de risque.",
+    "interet_perso": "N/A",
+    "mise_en_oeuvre": "Urgent : Identifier toutes les instances de FortiSIEM déployées au sein de l'infrastructure et appliquer immédiatement les correctifs de sécurité dès leur disponibilité. En l'absence de patchs, implémenter des mesures d'atténuation robustes (ex: isolation réseau, filtrage des accès, surveillance accrue) et rechercher toute activité anormale dans les logs. Préparer un plan de réponse en cas d'exploitation avérée.",
+    "fiabilite": "Élevée - Information technique et factuelle provenant d'un blog réputé dans le domaine de l'IT, mentionnant une CVE officielle et la présence d'un PoC d'exploitation, ce qui renforce la crédibilité de l'alerte.",
+    "score": 95,
+    "link": "https://www.it-connect.fr/fortinet-fortisiem-cve-2025-64155/",
+    "date": "2026-01-15T08:00:16.000Z"
+  },
+  {
+    "titre": "Bulletin CERT-FR : Récapitulatif des vulnérabilités critiques de la semaine (29 Déc. 2025)",
+    "resume": "Le CERT-FR publie son bulletin hebdomadaire recensant les vulnérabilités significatives découvertes la semaine précédente. Ce document met en lumière la criticité de ces failles et l'urgence de leur traitement. Il est crucial d'analyser ces informations pour prioriser les actions de remédiation.",
+    "interet_pro": "Outil indispensable pour la veille technologique et la gestion des vulnérabilités. Les équipes IT et sécurité doivent consulter ce bulletin pour identifier les systèmes affectés au sein de leur parc et planifier l'application des correctifs urgents afin de maintenir un niveau de sécurité optimal et prévenir les compromissions.",
+    "interet_perso": "N/A",
+    "mise_en_oeuvre": "Consulter le bulletin détaillé, identifier les systèmes vulnérables dans l'inventaire, puis planifier et appliquer les correctifs ou les mesures d'atténuation. Prioriser en fonction de la criticité et de l'exposition.",
+    "fiabilite": "Élevée - Source officielle et de référence (CERT-FR de l'ANSSI).",
+    "score": 95,
+    "link": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-057/",
+    "date": "2025-12-29T00:00:00.000Z"
+  },
+  {
+    "titre": "Récapitulatif des mises à jour de janvier 2026 pour Windows Server",
+    "resume": "Microsoft a publié les mises à jour de janvier 2026 pour l'ensemble des versions de Windows Server, incluant la KB5073379 pour Windows Server 2025. Cet article détaille les changements, correctifs de sécurité et améliorations apportés par ces patchs. Il s'agit d'un point régulier sur les patchs du Patch Tuesday.",
+    "interet_pro": "Essentiel pour les administrateurs systèmes afin de planifier et d'appliquer les correctifs de sécurité et de stabilité sur l'infrastructure serveur. La connaissance des nouveautés et des éventuels problèmes connus permet une gestion proactive et sécurisée du parc. La mise à jour régulière des serveurs est une pratique fondamentale en cybersécurité.",
+    "interet_perso": "N/A",
+    "mise_en_oeuvre": "Analyser les notes de version, planifier et tester le déploiement des mises à jour sur les serveurs de pré-production. Appliquer les correctifs de sécurité sur l'ensemble de l'infrastructure après validation. Surveiller les retours post-déploiement.",
+    "fiabilite": "Moyenne - Blog technique (IT-Connect), qui agrège les informations de Microsoft. La vérification croisée avec les sources officielles de Microsoft (Release Notes) est recommandée pour une fiabilité élevée.",
+    "score": 90,
+    "link": "https://www.it-connect.fr/le-point-sur-les-mises-a-jour-de-janvier-2026-pour-windows-server/",
+    "date": "2026-01-16T13:00:06.000Z"
+  },
+  {
+    "titre": "OVHcloud et Veeam s'associent pour la sauvegarde des serveurs Bare Metal",
+    "resume": "OVHcloud lance 'Backup Agent', une nouvelle offre de sauvegarde managée dédiée à ses serveurs Bare Metal. Cette solution s'appuie sur la technologie éprouvée de Veeam, offrant une protection robuste des données. Elle vise à simplifier la gestion des sauvegardes pour les administrateurs d'infrastructures dédiées.",
+    "interet_pro": "Pour les SysAdmins, DevOps et CISO, cette annonce est stratégique. Elle propose une solution de sauvegarde intégrée et managée pour l'écosystème OVHcloud, cruciale pour les plans de reprise d'activité (DRP) et de continuité des activités (BCP). L'intégration de Veeam garantit fiabilité et fonctionnalités avancées, essentielles pour la conformité et la résilience opérationnelle.",
+    "interet_perso": "N/A",
+    "mise_en_oeuvre": "Évaluer la pertinence de cette nouvelle solution pour les serveurs dédiés OVHcloud existants ou futurs. Analyser les coûts, les fonctionnalités et l'intégration avec les politiques de sauvegarde d'entreprise. Comparer avec les solutions de sauvegarde alternatives actuellement en place ou envisagées.",
+    "fiabilite": "Élevée - Annonce officielle d'un acteur majeur du cloud (OVHcloud) en partenariat avec un leader de la sauvegarde (Veeam).",
+    "score": 90,
+    "link": "https://www.it-connect.fr/ovhcloud-lance-backup-agent-une-solution-basee-sur-veeam-pour-la-sauvegarde-des-serveurs-dedies/",
+    "date": "2026-01-16T05:54:05.000Z"
+  },
+  {
+    "titre": "Amende colossale de 42M€ pour Free et Free Mobile suite à une cyberattaque et fuite d'IBAN",
+    "resume": "La CNIL a infligé une amende de 42 millions d'euros à Free et Free Mobile. Cette sanction fait suite à une cyberattaque survenue en octobre 2024, ayant entraîné la fuite de coordonnées bancaires (IBAN). Cette affaire souligne l'importance du respect de la protection des données personnelles et des mesures de sécurité adéquates.",
+    "interet_pro": "Ceci est un cas d'étude majeur pour la gouvernance, le risque et la conformité (GRC). Les entreprises doivent renforcer leurs mesures de sécurité pour prévenir les fuites de données, assurer la résilience de leurs systèmes et éviter des sanctions financières et de réputation similaires. La gestion post-incident est également cruciale.",
+    "interet_perso": "Vérifiez régulièrement vos relevés bancaires si vous êtes client de Free/Free Mobile. Soyez vigilant face aux tentatives de phishing ou d'arnaques utilisant vos coordonnées bancaires.",
+    "mise_en_oeuvre": "Informatif. Évaluer les politiques de sécurité des données, renforcer la protection des informations sensibles et revoir les plans de réponse aux incidents.",
+    "fiabilite": "Élevée - Source officielle (CNIL via IT-Connect, média spécialisé reconnu).",
+    "score": 90,
+    "link": "https://www.it-connect.fr/une-lourde-amende-de-42-millions-deuros-pour-free-et-free-mobile-a-cause-de-la-cyberattaque/",
+    "date": "2026-01-15T05:59:33.000Z"
+  },
+  {
+    "titre": "CERT-FR : Synthèse des vulnérabilités critiques de la semaine (12 Janvier 2026)",
+    "resume": "Ce bulletin du CERT-FR récapitule les vulnérabilités significatives découvertes la semaine passée, soulignant leur criticité. Il est destiné à informer les professionnels sur les risques majeurs actuels. L'organisme rappelle que ce bulletin ne remplace pas une analyse de risques approfondie pour la priorisation des correctifs.",
+    "interet_pro": "Ce bulletin est essentiel pour les SysAdmins et CISOs, offrant une vue consolidée des menaces critiques hebdomadaires identifiées par l'autorité nationale. Il permet une veille stratégique rapide et aide à orienter les efforts de patch management et la priorisation des actions de remédiation en fonction de l'analyse des risques interne.",
+    "interet_perso": "Peut être utile pour les passionnés de cybersécurité souhaitant suivre l'actualité des menaces globales ou identifier des vulnérabilités potentielles affectant des équipements grand public ou des applications courantes (Home Lab).",
+    "mise_en_oeuvre": "Informatif. Consulter les avis et alertes détaillés du CERT-FR mentionnés dans le bulletin. Mener une analyse de risques interne pour prioriser l'application des correctifs de sécurité sur les systèmes concernés.",
+    "fiabilite": "Élevée - Source officielle (CERT-FR/ANSSI), autorité nationale en cybersécurité.",
+    "score": 88,
+    "link": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2026-ACT-001/",
+    "date": "2026-01-12T00:00:00.000Z"
+  },
+  {
+    "titre": "Windows : Publication de Correctifs Urgents suite aux Bugs de Janvier",
+    "resume": "Microsoft a déployé des mises à jour hors bande pour Windows 10, Windows 11 et Windows Server. Ces correctifs visent à résoudre les dysfonctionnements et bugs introduits par les mises à jour régulières de janvier 2026. L'objectif est de restaurer la stabilité et la performance des systèmes affectés par ces problèmes récents.",
+    "interet_pro": "Crucial pour les administrateurs systèmes et responsables de la sécurité informatique (CISO) gérant des parcs Windows. L'application rapide de ces correctifs est impérative pour prévenir ou résoudre des problèmes de stabilité, de compatibilité applicative et potentiellement des brèches de sécurité qui pourraient impacter les opérations critiques de l'entreprise. Il est recommandé de planifier un déploiement diligent après une phase de test.",
+    "interet_perso": "Important pour tout utilisateur de Windows 10 ou Windows 11. Installer ces mises à jour peut résoudre des problèmes de performance, des plantages inattendus ou d'autres dysfonctionnements affectant l'ordinateur personnel suite aux mises à jour de janvier, améliorant ainsi l'expérience utilisateur quotidienne.",
+    "mise_en_oeuvre": "Appliquer immédiatement les mises à jour hors bande disponibles pour Windows 10, Windows 11 et Windows Server. Prioriser les systèmes critiques et tester dans un environnement de pré-production si la taille de l'infrastructure le permet, avant un déploiement généralisé.",
+    "fiabilite": "Faible - Bien que le contenu évoque des actions de Microsoft, la mention 'Source Inconnue' dans les métadonnées fournies pour cet article spécifique réduit la capacité à valider directement l'information par une source primaire. La fiabilité de l'information elle-même, concernant des patchs Microsoft, est généralement haute, mais l'origine du flux est ambiguë.",
+    "score": 85,
+    "link": "https://www.it-connect.fr/windows-10-windows-11-mises-a-jour-hors-bande-janvier-2026/",
+    "date": "2026-01-19T05:58:15.000Z"
+  }
 ]
