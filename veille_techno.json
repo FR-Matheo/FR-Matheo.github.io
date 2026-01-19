@@ -1,13 +1,3 @@
 [
-  {
-    "titre": "Windows : Microsoft déploie des correctifs d'urgence pour les bugs de janvier 2026",
-    "resume": "Microsoft a publié des mises à jour \"hors bande\" (Out-of-Band) pour Windows 10, Windows 11 et Windows Server. Ces patchs sont spécifiquement conçus pour corriger des bugs critiques introduits par les mises à jour régulières de janvier 2026. L'application rapide de ces correctifs est cruciale pour la stabilité et la sécurité des systèmes concernés.",
-    "interet_pro": "Pour les administrateurs système et les CISO, cette information est de haute criticité. Elle signale des problèmes de stabilité potentiellement graves suite aux dernières mises à jour Windows et la disponibilité immédiate de correctifs essentiels. Le déploiement rapide de ces patchs est impératif pour maintenir la sécurité, la disponibilité et l'intégrité des infrastructures d'entreprise, évitant ainsi des pannes inattendues ou des vulnérabilités exploitables.",
-    "interet_perso": "Les utilisateurs de Windows 10 et 11 sont également directement concernés par ces correctifs. Il est fortement recommandé de vérifier et d'appliquer ces mises à jour sur leurs équipements personnels afin de prévenir des dysfonctionnements, des instabilités du système ou des failles de sécurité.",
-    "mise_en_oeuvre": "Action immédiate : Planifier et exécuter le déploiement des mises à jour hors bande de Microsoft sur tous les postes de travail et serveurs Windows 10, Windows 11 et Windows Server impactés. Après l'application, vérifier que les bugs précédemment rencontrés sont bien résolus et maintenir une surveillance active pour détecter d'éventuels nouveaux problèmes post-patch.",
-    "fiabilite": "Moyenne à Élevée - Article relayé par IT-Connect, un blog technique francophone reconnu pour sa couverture des actualités et conseils autour des produits Microsoft. L'information est cohérente avec les pratiques habituelles de Microsoft en cas de bugs critiques.",
-    "score": 90,
-    "link": "https://www.it-connect.fr/windows-10-windows-11-mises-a-jour-hors-bande-janvier-2026/",
-    "date": "2026-01-19T05:58:15.000Z"
-  }
+  {}
 ]
