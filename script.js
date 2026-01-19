@@ -44,20 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener("scroll", highlightNavLink);
 
-    // 4. Contact Form Handling (Simple Alert for now)
-    const contactForm = document.getElementById("contactForm");
-    const formResponse = document.getElementById("formResponse");
-
-    if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            // Here you would typically send the data via AJAX
-            // For now, just show a success message
-            formResponse.innerHTML = '<div class="alert alert-success">Message envoyé avec succès !</div>';
-            contactForm.reset();
-            setTimeout(() => {
-                formResponse.innerHTML = '';
-            }, 5000);
-        });
-    }
+    // 4. Contact Form Handling (Removed for Formspree)
+    // The form now submits directly to Formspree via HTML action.
 });

@@ -620,25 +620,25 @@
             <div class="col-lg-8">
               <div class="card bg-dark-surface border-0 shadow-lg p-4 p-lg-5">
                 <h2 class="text-center text-white mb-4">Me <span class="text-primary">Contacter</span></h2>
-                <form id="contactForm">
+                <form id="contactForm" action="https://formspree.io/f/mkgndjle" method="POST">
                   <div class="row g-3">
                     <div class="col-md-6">
                       <div class="form-floating mb-3">
                         <input type="text" class="form-control bg-darker border-secondary text-white" id="name"
-                          placeholder="Nom" required>
+                          name="name" placeholder="Nom" required>
                         <label for="name" class="text-muted">Nom</label>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating mb-3">
                         <input type="email" class="form-control bg-darker border-secondary text-white" id="email"
-                          placeholder="Email" required>
+                          name="email" placeholder="Email" required>
                         <label for="email" class="text-muted">Email</label>
                       </div>
                     </div>
                     <div class="col-12">
                       <div class="form-floating mb-3">
-                        <textarea class="form-control bg-darker border-secondary text-white" id="message"
+                        <textarea class="form-control bg-darker border-secondary text-white" id="message" name="message"
                           placeholder="Message" style="height: 150px" required></textarea>
                         <label for="message" class="text-muted">Message</label>
                       </div>
