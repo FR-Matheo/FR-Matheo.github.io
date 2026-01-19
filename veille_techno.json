@@ -1,68 +1,13 @@
 [
   {
-    "titre": "Alerte Sécurité : La vulnérabilité React2Shell est activement exploitée par des groupes chinois",
-    "resume": "Des groupes cybercriminels liés à l'État chinois ont commencé à exploiter massivement la vulnérabilité connue sous le nom de 'React2Shell'. Ces attaques ciblent activement les systèmes non patchés, représentant une menace immédiate et sérieuse pour la sécurité des infrastructures. Des mesures de protection urgentes sont requises.",
-    "interet_pro": "Risque d'intrusion critique pour les systèmes utilisant les composants affectés par React2Shell. Exige une identification rapide des actifs vulnérables et l'application immédiate de correctifs ou de mesures de mitigation pour prévenir des compromissions majeures.",
-    "interet_perso": "N/A",
-    "mise_en_oeuvre": "Identifier et patcher sans délai toutes les instances vulnérables à React2Shell. Mettre en place des surveillances renforcées sur les systèmes exposés et appliquer des règles de détection d'intrusion si des correctifs ne sont pas immédiatement disponibles.",
-    "fiabilite": "Élevée - IT-Connect est un blog technique réputé pour les alertes de sécurité, il est impératif de consulter les bulletins de sécurité officiels des éditeurs.",
-    "score": 100,
-    "link": "https://www.it-connect.fr/react2shell-groupes-lies-a-la-chine-exploitent-vulnerabilite/",
-    "date": "2025-12-05T06:53:19.000Z"
-  },
-  {
-    "titre": "Alerte Majeure : Vague d'Attaques par la Chaîne d’Approvisionnement NPM (Plus de 700 paquets compromis)",
-    "resume": "Une attaque de grande ampleur par la chaîne d'approvisionnement affecte le registre NPM, compromettant plus de 700 paquets via un logiciel malveillant auto-réplicatif. Débutée le 23 novembre 2025, cette campagne cible des versions spécifiques de ces paquets. Elle représente un risque significatif d'injection de code malveillant dans les projets dépendants.",
-    "interet_pro": "Les organisations utilisant des paquets NPM dans leurs développements doivent impérativement auditer leurs dépendances pour identifier et isoler toute version compromise. L'impact potentiel est l'intégration de code malveillant directement dans les applications de production. Une revue des pratiques de sécurité de la supply chain est nécessaire.",
-    "interet_perso": "Les développeurs personnels utilisant NPM pour leurs projets doivent vérifier leurs dépendances. Pour les utilisateurs finaux, indirectement affectés par les applications compromises.",
-    "mise_en_oeuvre": "Auditer immédiatement toutes les dépendances NPM pour identifier les versions affectées et les mettre à jour vers des versions sécurisées si disponibles, ou les supprimer. Renforcer la sécurité de la chaîne d'approvisionnement logicielle.",
-    "fiabilite": "Élevée - Source officielle (CERT-FR).",
-    "score": 98,
-    "link": "https://www.cert.ssi.gouv.fr/actualite/CERTFR-2025-ACT-051/",
-    "date": "2025-11-27T00:00:00.000Z"
-  },
-  {
-    "titre": "Alerte Critique : Vulnérabilité d'Exécution de Code à Distance (RCE) dans React Server Components (CVE-2025-55182)",
-    "resume": "Une vulnérabilité critique (CVE-2025-55182) permettant l'exécution de code arbitraire à distance (RCE) affecte les React Server Components. Elle concerne spécifiquement les paquets react-server-dom-webpack (versions 19.0.x antérieures à 19.0.1, 19.1.x antérieures à 19.1.2, 19.2.x antérieures à 19.2.1) et react-server-dom-parcel (versions antérieures similaires). Un attaquant non authentifié peut exploiter cette faille, ce qui représente un risque majeur pour les applications web.",
-    "interet_pro": "Les entreprises utilisant React Server Components, notamment via Next.js, sont directement menacées. Une exploitation réussie peut mener à une compromission complète du serveur. Une identification rapide des versions impactées et l'application des correctifs sont des priorités absolues pour la sécurité des applications critiques.",
-    "interet_perso": "N/A (Principalement lié aux développements et applications web en production).",
-    "mise_en_oeuvre": "Mettre à jour immédiatement les paquets react-server-dom-webpack et react-server-dom-parcel vers les versions sécurisées (19.0.1, 19.1.2, 19.2.1 ou supérieures). Auditer l'environnement pour détecter d'éventuels signes d'exploitation.",
-    "fiabilite": "Élevée - Source officielle (CERT-FR, relayant des informations de sécurité de React/Next.js), avec détails techniques précis.",
-    "score": 97,
-    "link": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-014/",
-    "date": "2025-12-05T00:00:00.000Z"
-  },
-  {
-    "titre": "Alerte CISA : Le malware Brickstorm cible les serveurs VMware vSphere",
-    "resume": "La CISA alerte sur le déploiement actif du malware Brickstorm par des pirates chinois. Ce backdoor sophistiqué compromet les serveurs VMware vSphere, menaçant l'infrastructure critique des organisations. Des attaques sont déjà documentées, soulignant l'urgence de cette menace persistante.",
-    "interet_pro": "Essentiel pour les SysAdmins et CISOs utilisant VMware. Une compromission des serveurs vSphere peut paralyser l'ensemble de l'environnement virtuel, menant à une perte de données, une exfiltration ou un contrôle total du SI. La détection et la réponse rapides sont cruciales.",
-    "interet_perso": "N/A",
-    "mise_en_oeuvre": "Vérifier l'intégrité de tous les serveurs VMware vSphere, rechercher les indicateurs de compromission (IoCs) fournis par la CISA, et appliquer les correctifs de sécurité dès que disponibles. Renforcer la segmentation réseau des environnements virtuels.",
-    "fiabilite": "Élevée - Basée sur une alerte officielle de la CISA, une source de renseignement sur les menaces de premier plan.",
-    "score": 95,
-    "link": "https://www.it-connect.fr/vmware-vsphere-malware-brickstorm-2025/",
-    "date": "2025-12-08T07:51:47.000Z"
-  },
-  {
-    "titre": "Microsoft 365 : nouvelles fonctionnalités et hausse des tarifs prévue pour 2026",
-    "resume": "Microsoft a annoncé des évolutions majeures pour ses offres Microsoft 365 Business et Enterprise en 2026. De nouvelles fonctionnalités seront intégrées, mais ces améliorations s'accompagneront d'une augmentation tarifaire significative. Il est crucial pour les entreprises d'anticiper ces changements.",
-    "interet_pro": "Impact direct sur les budgets IT et les stratégies d'adoption de services cloud. Nécessite une veille proactive pour ajuster les plans d'abonnement et évaluer l'optimisation des coûts.",
-    "interet_perso": "N/A",
-    "mise_en_oeuvre": "Évaluer l'impact budgétaire des nouveaux tarifs et des fonctionnalités sur l'entreprise, puis ajuster les plans d'abonnement Microsoft 365 en conséquence.",
-    "fiabilite": "Moyenne à Élevée - IT-Connect relaie des informations de Microsoft. Une confirmation directe via les canaux officiels de Microsoft est recommandée.",
-    "score": 95,
-    "link": "https://www.it-connect.fr/microsoft-365-en-2026-nouvelles-fonctionnalites-nouveaux-tarifs/",
-    "date": "2025-12-05T08:23:01.000Z"
-  },
-  {
-    "titre": "GLPI : Mises à jour de sécurité urgentes (11.0.4 et 10.0.22) disponibles",
-    "resume": "Teclib, l'éditeur de GLPI, a publié les versions 11.0.4 et 10.0.22, corrigeant plusieurs failles de sécurité critiques. Ces mises à jour adressent des CVE importantes et doivent être appliquées sans délai pour protéger vos infrastructures. La liste des vulnérabilités patchées est détaillée dans l'annonce.",
-    "interet_pro": "Indispensable pour toutes les organisations utilisant GLPI afin de corriger des vulnérabilités pouvant mener à des compromissions. Une non-application expose les données de gestion IT à des risques significatifs.",
-    "interet_perso": "N/A",
-    "mise_en_oeuvre": "Planifier et exécuter immédiatement la mise à jour des instances GLPI vers les versions 11.0.4 ou 10.0.22 selon la version en production.",
-    "fiabilite": "Élevée - IT-Connect relaie une annonce officielle de l'éditeur Teclib concernant des mises à jour de sécurité. Vérifier les bulletins officiels de Teclib/GLPI pour les détails des CVE.",
-    "score": 95,
-    "link": "https://www.it-connect.fr/glpi-11-0-4-et-glpi-10-0-22-deux-mises-a-jour-de-securite-a-appliquer-maintenant/",
-    "date": "2025-12-04T14:15:00.000Z"
+    "titre": "Windows : Microsoft déploie des correctifs d'urgence pour les bugs de janvier 2026",
+    "resume": "Microsoft a publié des mises à jour \"hors bande\" (Out-of-Band) pour Windows 10, Windows 11 et Windows Server. Ces patchs sont spécifiquement conçus pour corriger des bugs critiques introduits par les mises à jour régulières de janvier 2026. L'application rapide de ces correctifs est cruciale pour la stabilité et la sécurité des systèmes concernés.",
+    "interet_pro": "Pour les administrateurs système et les CISO, cette information est de haute criticité. Elle signale des problèmes de stabilité potentiellement graves suite aux dernières mises à jour Windows et la disponibilité immédiate de correctifs essentiels. Le déploiement rapide de ces patchs est impératif pour maintenir la sécurité, la disponibilité et l'intégrité des infrastructures d'entreprise, évitant ainsi des pannes inattendues ou des vulnérabilités exploitables.",
+    "interet_perso": "Les utilisateurs de Windows 10 et 11 sont également directement concernés par ces correctifs. Il est fortement recommandé de vérifier et d'appliquer ces mises à jour sur leurs équipements personnels afin de prévenir des dysfonctionnements, des instabilités du système ou des failles de sécurité.",
+    "mise_en_oeuvre": "Action immédiate : Planifier et exécuter le déploiement des mises à jour hors bande de Microsoft sur tous les postes de travail et serveurs Windows 10, Windows 11 et Windows Server impactés. Après l'application, vérifier que les bugs précédemment rencontrés sont bien résolus et maintenir une surveillance active pour détecter d'éventuels nouveaux problèmes post-patch.",
+    "fiabilite": "Moyenne à Élevée - Article relayé par IT-Connect, un blog technique francophone reconnu pour sa couverture des actualités et conseils autour des produits Microsoft. L'information est cohérente avec les pratiques habituelles de Microsoft en cas de bugs critiques.",
+    "score": 90,
+    "link": "https://www.it-connect.fr/windows-10-windows-11-mises-a-jour-hors-bande-janvier-2026/",
+    "date": "2026-01-19T05:58:15.000Z"
   }
 ]
