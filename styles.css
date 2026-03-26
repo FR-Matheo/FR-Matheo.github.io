@@ -7,8 +7,8 @@
     --bg-sidebar: #1e293b;
     /* Slate 800 */
     --bg-card: #1e293b;
-    --bg-darker: #020617;
-    /* Slate 950 */
+    --bg-darker: #293444;
+    /* Slate 950 customized */
 
     --text-primary: #f8fafc;
     /* Slate 50 */
@@ -239,6 +239,10 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.bg-darker {
+    background-color: var(--bg-darker) !important;
+}
+
 .bg-darker-alt {
     background-color: #0b1120;
 }
@@ -379,6 +383,10 @@ a:hover {
 
 .bg-primary-gradient {
     background: linear-gradient(135deg, var(--accent-color), #1d4ed8);
+}
+
+.bg-success-gradient {
+    background: linear-gradient(135deg, #10b981, #047857);
 }
 
 .blob-1 {

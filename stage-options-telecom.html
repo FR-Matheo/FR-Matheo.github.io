@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 2ème année - Options Télécom | Matheo FRACASSI</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      padding-top: 0;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--bg-darker), var(--bg-card));
+      padding: 100px 0 60px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      z-index: 10;
+    }
+
+    .placeholder-img {
+      background: rgba(255, 255, 255, 0.03);
+      border: 2px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .placeholder-img:hover {
+      border-color: var(--accent-color);
+      color: var(--text-primary);
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    .placeholder-img img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      /* Hidden placeholder image until user adds src */
+      z-index: 1;
+    }
+
+    .placeholder-img.has-image img {
+      opacity: 1;
+    }
+
+    .placeholder-img.has-image .placeholder-content {
+      display: none;
+    }
+
+    .project-section {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .skill-badge {
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--accent-light, #60a5fa);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0.3rem;
+      transition: all 0.3s ease;
+    }
+
+    .skill-badge:hover {
+      background: rgba(59, 130, 246, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+    }
+
+    /* Hide sidebar layout adjustments for standalone pages without sidebar */
+    @media (min-width: 992px) {
+      .standalone-main {
+        margin-left: 0 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="main-content standalone-main">
+    <!-- Header Page -->
+    <div class="page-header text-center">
+      <a href="index.html#stages" class="btn btn-outline-light rounded-pill px-4 back-btn hover-lift">
+        <i class="fas fa-arrow-left me-2"></i> Retour
+      </a>
+
+      <div class="container position-relative z-1 mb-4">
+        <span class="badge bg-primary mb-3 px-3 py-2 fs-6 shadow-sm">Stage 2ème année BTS SIO SISR</span>
+        <h1 class="display-4 fw-bold text-white mb-3">Options Télécom</h1>
+        <h2 class="h3 text-gray-300 fw-light">Technicien Systèmes et Réseaux</h2>
+      </div>
+    </div>
+
+    <div class="container-xl py-5">
+
+      <!-- Section 1 : Introduction -->
+      <div class="row mb-5 g-5 align-items-center">
+        <div class="col-lg-8">
+          <h2 class="text-white mb-4 display-6"><i class="fas fa-info-circle text-primary me-3"></i> Contexte du Stage
+          </h2>
+          <p class="text-gray-300 lead">
+            Lors de ma deuxième année de BTS SIO au sein d'<strong>Options Télécom</strong>, j'ai occupé le rôle de
+            <strong>Technicien Télécom et Réseaux</strong>.
+          </p>
+          <p class="text-gray-300">
+            Cette expérience très enrichissante m'a permis de travailler sur le <strong>déploiement complet
+              d'infrastructures</strong> informatiques et réseaux (de l'installation physique jusqu'à la configuration
+            logique avancée), ainsi que sur le <strong>support utilisateur de niveau 1 et 2</strong>. J'ai eu
+            l'opportunité de manipuler des équipements variés (Fortinet, Yeastar, 3CX, Unifi) et de participer
+            activement à
+            la résolution d'incidents via des outils professionnels comme Autotask.
+          </p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <div class="card bg-dark-glass border-0 p-5 shadow-lg">
+            <i class="fas fa-building fa-4x text-primary mb-3"></i>
+            <h3 class="h4 text-white">Options Télécom</h3>
+            <div class="d-flex flex-column gap-2 mt-3">
+              <span class="badge bg-darker border border-secondary text-gray-300 py-2"><i
+                  class="fas fa-network-wired me-2"></i> Déploiement Infra</span>
+              <span class="badge bg-darker border border-secondary text-gray-300 py-2"><i
+                  class="fas fa-headset me-2"></i> Support Niveau 1 & 2</span>
+              <span class="badge bg-darker border border-secondary text-gray-300 py-2"><i
+                  class="fas fa-shield-alt me-2"></i> Sécurité & Réseaux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="border-secondary mb-5 opacity-25">
+
+      <!-- Section 2 : Réalisations Techniques & Projets -->
+      <h2 class="section-title text-center mb-5 w-100">Réalisations <span class="text-primary">Techniques &
+          Projets</span></h2>
+
+      <!-- Projet Phare -->
+      <div class="project-section shadow-lg hover-scale" style="transition: transform 0.3s; transform: none;">
+        <div
+          class="d-flex flex-column flex-md-row align-items-md-center mb-5 pb-3 border-bottom border-secondary border-opacity-25">
+          <div class="icon-square bg-primary-gradient text-white rounded-4 p-4 me-4 mb-3 mb-md-0 shadow">
+            <i class="fas fa-server fa-2x"></i>
+          </div>
+          <div>
+            <h3 class="text-white mb-1 h2 fw-bold">Projet Phare : Showroom Options Télécom</h3>
+            <p class="text-primary mb-0 lead">Conception et Déploiement de la Baie Informatique</p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Mission 1 : Câblage -->
+          <div class="col-lg-6">
+            <div class="card bg-darker border-secondary border-opacity-25 h-100 p-4 shadow-sm hover-lift">
+              <h4 class="text-white h5 mb-3 d-flex align-items-center"><i class="fas fa-plug text-info fa-lg me-3"></i>
+                Câblage et Installation physique</h4>
+              <p class="text-gray-300 mb-4">
+                Installation de la baie de brassage de A à Z. J'ai réalisé le câblage complet et serti avec précision
+                les prises RJ45 pour assurer une connectivité optimale et documenter l'infrastructure.
+              </p>
+              <div class="placeholder-img mt-auto has-image">
+                <!-- Change the src attribute when images are ready, and add the 'has-image' class to the parent div -->
+                <img src="./images/Stage OT/RJ45_Baie.jpg" alt="Prises RJ45 et baie câblée">
+              </div>
+            </div>
+          </div>
+
+          <!-- Mission 2 : Fortinet -->
+          <div class="col-lg-6">
+            <div class="card bg-darker border-secondary border-opacity-25 h-100 p-4 shadow-sm hover-lift">
+              <h4 class="text-white h5 mb-3 d-flex align-items-center"><i
+                  class="fas fa-shield-alt text-danger fa-lg me-3"></i> Routage et Sécurité (Fortinet)</h4>
+              <p class="text-gray-300 mb-4">
+                Configuration d'un routeur <strong>FortiGate 40F</strong> : paramétrage des interfaces LAN/WAN,
+                adressage manuel/DHCP, mise en place d'un <strong>SD-WAN</strong> avec bascule de lien (Failover) et SLA
+                de performance, ainsi que l'ouverture ciblée des flux (HTTPS, PING, SSH).
+              </p>
+              <div class="placeholder-img mt-auto has-image">
+                <img src="./images/Stage OT/Dashboard_Forti.png" alt="Configuration Fortinet">
+              </div>
+            </div>
+          </div>
+
+          <!-- Mission 3 : Commutation Unifi -->
+          <div class="col-lg-6">
+            <div class="card bg-darker border-secondary border-opacity-25 h-100 p-4 shadow-sm hover-lift">
+              <h4 class="text-white h5 mb-3 d-flex align-items-center"><i
+                  class="fas fa-network-wired text-success fa-lg me-3"></i> Commutation (Switch Unifi)</h4>
+              <p class="text-gray-300 mb-4">
+                Déploiement logiciel du switch et adoption sur le contrôleur cloud <strong>Hostifi</strong> via une
+                connexion SSH sécurisée, permettant une gestion centralisée et simplifiée des équipements réseau.
+              </p>
+              <div class="placeholder-img mt-auto has-image">
+                <img src="./images/Stage OT/Switch_Unifi.png" alt="Capture Hostifi / Unifi Controller">
+              </div>
+            </div>
+          </div>
+
+          <!-- Mission 4 : Téléphonie IP Yeastar -->
+          <div class="col-lg-6">
+            <div class="card bg-darker border-secondary border-opacity-25 h-100 p-4 shadow-sm hover-lift">
+              <h4 class="text-white h5 mb-3 d-flex align-items-center"><i
+                  class="fas fa-phone-alt text-warning fa-lg me-3"></i> Téléphonie IP (IPBX Yeastar)</h4>
+              <p class="text-gray-300 mb-4">
+                Déploiement de l'architecture ToIP hébergée sur <strong>Yeastar Central Management</strong>.
+                Configuration des Trunk SIP (5 SDA), comptes utilisateurs avec annuaire LDAP, provisionning des
+                téléphones Yealink sur le <strong>VLAN Voix</strong>, et création de scénarios d'appels avancés (files
+                d'attente, SVI).
+              </p>
+              <div class="placeholder-img mt-auto has-image">
+                <img src="./images/Stage OT/Trunk_SIP.png" alt="Interface Yeastar et provisionning">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 2 : Support -->
+      <div class="project-section shadow-lg mt-5 hover-scale" style="transition: transform 0.3s; transform: none;">
+        <div
+          class="d-flex flex-column flex-md-row align-items-md-center mb-5 pb-3 border-bottom border-secondary border-opacity-25">
+          <div class="icon-square bg-success text-white rounded-4 p-4 me-4 mb-3 mb-md-0 shadow">
+            <i class="fas fa-headset fa-2x"></i>
+          </div>
+          <div>
+            <h3 class="text-white mb-1 h2 fw-bold">Mission 2 : Support Utilisateur & Helpdesk</h3>
+            <p class="text-success mb-0 lead">Gestion des incidents et interventions clients (Ticketing)</p>
+          </div>
+        </div>
+
+        <p class="text-gray-300 mb-5 lead">
+          Assistance et résolution d'incidents techniques en centre de services, avec l'utilisation poussée de l'outil
+          de ticketing <strong>Zammad</strong> pour la qualification, la traçabilité et le suivi SLA.
+        </p>
+
+        <div class="row g-4 mb-5">
+          <!-- MGO -->
+          <div class="col-md-6">
+            <div class="card bg-darker border-secondary border-opacity-25 h-100 p-4 border-start border-4 border-info">
+              <h4 class="text-white h5 mb-3 d-flex align-items-center"><i class="fas fa-industry text-info me-2"></i>
+                Intervention Client - MGO</h4>
+              <ul class="text-gray-300 small ps-3 mb-0 d-flex flex-column gap-2">
+                <li><strong>Diagnostic approfondi</strong> suite à une perte de connectivité sans fil signalée.</li>
+                <li><strong>Installation et provisioning</strong> d'une borne DECT de remplacement (Spare).</li>
+                <li><strong>Tests de couverture</strong> réalisés en conditions réelles dans un atelier industriel (sans
+                  coupure de production).</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Legatis -->
+          <div class="col-md-6">
+            <div
+              class="card bg-darker border-secondary border-opacity-25 h-100 p-4 border-start border-4 border-warning">
+              <h4 class="text-white h5 mb-3 d-flex align-items-center"><i
+                  class="fas fa-headphones text-warning me-2"></i> Intervention Client - Legatis</h4>
+              <ul class="text-gray-300 small ps-3 mb-0 d-flex flex-column gap-2">
+                <li><strong>Support hardware</strong> de niveau 1.</li>
+                <li><strong>Diagnostic de panne</strong> ciblé sur un équipement audio (casque défectueux).</li>
+                <li>Récupération du matériel et exécution d'une <strong>procédure d'échange standard</strong> pour un
+                  rétablissement rapide du service.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <p class="text-gray-300 mb-5 lead text-center">
+          Exemple de ticket avec Zammad :
+        </p>
+
+        <div class="placeholder-img has-image" style="min-height: 550px;">
+          <img src="./images/Stage OT/Exemple_ticket.png" alt="Tickets Zammad résolus">
+        </div>
+      </div>
+
+      <div class="mt-5 pt-4 text-center">
+        <!-- Section 3 : Compétences -->
+        <h2 class="h3 text-white mb-4"><i class="fas fa-graduation-cap text-primary me-2"></i> Compétences <span
+            class="text-primary">BTS SIO SISR (E4 / E5)</span> mobilisées</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-2 max-w-4xl mx-auto" style="max-width: 900px;">
+          <div class="skill-badge"><i class="fas fa-laptop-medical"></i> Gérer le patrimoine informatique (recensement,
+            doc)</div>
+          <div class="skill-badge"><i class="fas fa-life-ring"></i> Répondre aux incidents et demandes d'assistance
+          </div>
+          <div class="skill-badge"><i class="fas fa-box-open"></i> Mettre à disposition un service informatique</div>
+          <div class="skill-badge"><i class="fas fa-project-diagram"></i> Concevoir, installer et administrer une
+            infrastructure</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-muted py-4 border-top border-secondary mt-5 bg-darker">
+      <div class="container">
+        <p class="mb-0">&copy; <span id="currentYear"></span> Matheo FRACASSI. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
