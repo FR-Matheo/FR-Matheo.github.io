@@ -138,7 +138,8 @@ function displayVeilleTechnologique(articles) {
     }
 
     containerElement.innerHTML = articles.map(article => {
-        const image = getSourceImage(article.link);
+        // Utilise l'image spécifique de l'article si elle est présente dans le JSON (N8N), sinon utilise l'image par défaut
+        const image = article.image || getSourceImage(article.link);
         const sourceName = getSourceFromUrl(article.link);
         const date = new Date(article.date).toLocaleDateString('fr-FR', {
             day: 'numeric', month: 'long', year: 'numeric'
